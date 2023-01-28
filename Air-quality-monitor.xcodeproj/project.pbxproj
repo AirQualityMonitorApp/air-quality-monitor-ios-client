@@ -20,7 +20,6 @@
 		A24A2BD929851B85000D4868 /* TempHumidityLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24A2BD729851B85000D4868 /* TempHumidityLevels.swift */; };
 		A24A2BDA29851B85000D4868 /* PmGasLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24A2BD829851B85000D4868 /* PmGasLevels.swift */; };
 		A24A2BDC29851BBC000D4868 /* GasPmValuesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24A2BDB29851BBC000D4868 /* GasPmValuesView.swift */; };
-		A24A2BDE29851BE6000D4868 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24A2BDD29851BE6000D4868 /* LoadingView.swift */; };
 		A282E09C298435EC00AEEC69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A282E09B298435EC00AEEC69 /* Preview Assets.xcassets */; };
 		A282E0A32984366100AEEC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A282E0A22984366100AEEC69 /* Assets.xcassets */; };
 		A282E0A72984367400AEEC69 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A282E0A62984367400AEEC69 /* GoogleService-Info.plist */; };
@@ -33,15 +32,11 @@
 		A282E0B829843D6800AEEC69 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A282E0B729843D6800AEEC69 /* FirebaseFirestoreSwift */; };
 		A291B443298440B400322E32 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B431298440B400322E32 /* SignUp.swift */; };
 		A291B444298440B400322E32 /* AQIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B417298440B400322E32 /* AQIView.swift */; };
-		A291B445298440B400322E32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B433298440B400322E32 /* ContentView.swift */; };
 		A291B446298440B400322E32 /* DashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B41F298440B400322E32 /* DashboardInteractor.swift */; };
-		A291B447298440B400322E32 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B420298440B400322E32 /* SignInView.swift */; };
-		A291B448298440B400322E32 /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B432298440B400322E32 /* PasswordResetView.swift */; };
 		A291B44C2984416100322E32 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B44B2984416100322E32 /* SessionManager.swift */; };
 		A291B450298441F400322E32 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B44F298441F400322E32 /* HeaderView.swift */; };
 		A291B453298441F900322E32 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B452298441F900322E32 /* ViewRouter.swift */; };
 		A291B454298441F900322E32 /* ValueInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B451298441F900322E32 /* ValueInformation.swift */; };
-		A291B48A2984424000322E32 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4892984424000322E32 /* SettingsViewModel.swift */; };
 		A291B4912984424C00322E32 /* DeleteAccountErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B48B2984424C00322E32 /* DeleteAccountErrorMessage.swift */; };
 		A291B4922984424C00322E32 /* UserSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B48C2984424C00322E32 /* UserSettingsViewModel.swift */; };
 		A291B4932984424C00322E32 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B48D2984424C00322E32 /* ChangePasswordView.swift */; };
@@ -57,22 +52,24 @@
 		A291B4A5298515DE00322E32 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = A291B4A4298515DE00322E32 /* Networking */; };
 		A291B4A7298515E200322E32 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = A291B4A6298515E200322E32 /* UIComponents */; };
 		A291B4A92985165B00322E32 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4A82985165B00322E32 /* DashboardView.swift */; };
-		A291B4AB2985167C00322E32 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4AA2985167C00322E32 /* DashboardViewModel.swift */; };
-		A291B4B32985178F00322E32 /* PasswordResetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4AC2985178F00322E32 /* PasswordResetButton.swift */; };
-		A291B4B42985178F00322E32 /* BackToLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4AD2985178F00322E32 /* BackToLoginButton.swift */; };
-		A291B4B52985178F00322E32 /* EmailFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4AE2985178F00322E32 /* EmailFieldView.swift */; };
-		A291B4B62985178F00322E32 /* GoToSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4AF2985178F00322E32 /* GoToSignUpView.swift */; };
-		A291B4B72985178F00322E32 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4B02985178F00322E32 /* ActionButton.swift */; };
-		A291B4B82985178F00322E32 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4B12985178F00322E32 /* LogoView.swift */; };
-		A291B4B92985178F00322E32 /* PasswordFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4B22985178F00322E32 /* PasswordFieldView.swift */; };
-		A291B4BB298518BA00322E32 /* PasswordResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4BA298518BA00322E32 /* PasswordResetViewModel.swift */; };
 		A291B4BD298519A000322E32 /* WeatherValuesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4BC298519A000322E32 /* WeatherValuesView.swift */; };
 		A291B4BF298519D400322E32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4BE298519D400322E32 /* ContentView.swift */; };
 		A291B4C129851A0900322E32 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4C029851A0900322E32 /* SignUpView.swift */; };
 		A291B4C429851A1700322E32 /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4C229851A1700322E32 /* PasswordResetView.swift */; };
 		A291B4C529851A1700322E32 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4C329851A1700322E32 /* SessionManager.swift */; };
 		A291B4C729851A2100322E32 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4C629851A2100322E32 /* SignInView.swift */; };
-		A291B4C929851A3B00322E32 /* VerifyEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4C829851A3B00322E32 /* VerifyEmailView.swift */; };
+		A2C2CDB129852BAE00EFAD1C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2CDB029852BAE00EFAD1C /* LoadingView.swift */; };
+		A2C2CDB329852C2400EFAD1C /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2CDB229852C2400EFAD1C /* SettingsViewModel.swift */; };
+		A2C2CDB529852CC800EFAD1C /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2CDB429852CC700EFAD1C /* DashboardViewModel.swift */; };
+		A2C2CDB829852D5B00EFAD1C /* VerifyEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2CDB629852D5B00EFAD1C /* VerifyEmailView.swift */; };
+		A2C2CDB929852D5B00EFAD1C /* PasswordResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2CDB729852D5B00EFAD1C /* PasswordResetViewModel.swift */; };
+		A2C2CDC129852DEE00EFAD1C /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2CDBA29852DEE00EFAD1C /* LogoView.swift */; };
+		A2C2CDC229852DEE00EFAD1C /* BackToLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2CDBB29852DEE00EFAD1C /* BackToLoginButton.swift */; };
+		A2C2CDC329852DEE00EFAD1C /* PasswordResetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2CDBC29852DEE00EFAD1C /* PasswordResetButton.swift */; };
+		A2C2CDC429852DEE00EFAD1C /* GoToSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2CDBD29852DEE00EFAD1C /* GoToSignUpView.swift */; };
+		A2C2CDC529852DEE00EFAD1C /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2CDBE29852DEE00EFAD1C /* ActionButton.swift */; };
+		A2C2CDC629852DEE00EFAD1C /* PasswordFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2CDBF29852DEE00EFAD1C /* PasswordFieldView.swift */; };
+		A2C2CDC729852DEE00EFAD1C /* EmailFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2CDC029852DEE00EFAD1C /* EmailFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,7 +86,6 @@
 		A24A2BD729851B85000D4868 /* TempHumidityLevels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempHumidityLevels.swift; sourceTree = "<group>"; };
 		A24A2BD829851B85000D4868 /* PmGasLevels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PmGasLevels.swift; sourceTree = "<group>"; };
 		A24A2BDB29851BBC000D4868 /* GasPmValuesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GasPmValuesView.swift; sourceTree = "<group>"; };
-		A24A2BDD29851BE6000D4868 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		A282E090298435EB00AEEC69 /* Air-quality-monitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Air-quality-monitor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A282E099298435EC00AEEC69 /* Air_quality_monitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Air_quality_monitor.entitlements; sourceTree = "<group>"; };
 		A282E09B298435EC00AEEC69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -100,56 +96,13 @@
 		A282E0BD29843E2300AEEC69 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Models; sourceTree = "<group>"; };
 		A282E0BE29843E5A00AEEC69 /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UIComponents; sourceTree = "<group>"; };
 		A291B417298440B400322E32 /* AQIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIView.swift; sourceTree = "<group>"; };
-		A291B419298440B400322E32 /* VocLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocLevel.swift; sourceTree = "<group>"; };
-		A291B41A298440B400322E32 /* Co2Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Co2Level.swift; sourceTree = "<group>"; };
-		A291B41B298440B400322E32 /* TemperatureLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureLevel.swift; sourceTree = "<group>"; };
-		A291B41C298440B400322E32 /* PmLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PmLevel.swift; sourceTree = "<group>"; };
-		A291B41D298440B400322E32 /* AQILevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQILevels.swift; sourceTree = "<group>"; };
-		A291B41E298440B400322E32 /* HumidityLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumidityLevel.swift; sourceTree = "<group>"; };
 		A291B41F298440B400322E32 /* DashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractor.swift; sourceTree = "<group>"; };
-		A291B420298440B400322E32 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		A291B423298440B400322E32 /* AQIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIColor.swift; sourceTree = "<group>"; };
-		A291B424298440B400322E32 /* GasPmColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasPmColors.swift; sourceTree = "<group>"; };
-		A291B425298440B400322E32 /* HumidityTemperatureColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumidityTemperatureColor.swift; sourceTree = "<group>"; };
-		A291B426298440B400322E32 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		A291B428298440B400322E32 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
-		A291B42A298440B400322E32 /* GasPmValuesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasPmValuesView.swift; sourceTree = "<group>"; };
-		A291B42B298440B400322E32 /* WeatherValuesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherValuesView.swift; sourceTree = "<group>"; };
-		A291B42C298440B400322E32 /* CircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularView.swift; sourceTree = "<group>"; };
-		A291B42E298440B400322E32 /* PmGasLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PmGasLevels.swift; sourceTree = "<group>"; };
-		A291B42F298440B400322E32 /* TempHumidityLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempHumidityLevels.swift; sourceTree = "<group>"; };
 		A291B431298440B400322E32 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
-		A291B432298440B400322E32 /* PasswordResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
-		A291B433298440B400322E32 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A291B435298440B400322E32 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		A291B438298440B400322E32 /* PasswordFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordFieldView.swift; sourceTree = "<group>"; };
-		A291B439298440B400322E32 /* GoToSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToSignUpView.swift; sourceTree = "<group>"; };
-		A291B43A298440B400322E32 /* BackToLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToLoginButton.swift; sourceTree = "<group>"; };
-		A291B43B298440B400322E32 /* PasswordResetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetButton.swift; sourceTree = "<group>"; };
-		A291B43C298440B400322E32 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
-		A291B43D298440B400322E32 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
-		A291B43E298440B400322E32 /* EmailFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailFieldView.swift; sourceTree = "<group>"; };
-		A291B440298440B400322E32 /* PasswordResetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewModel.swift; sourceTree = "<group>"; };
-		A291B441298440B400322E32 /* VerifyEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyEmailView.swift; sourceTree = "<group>"; };
-		A291B442298440B400322E32 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		A291B44B2984416100322E32 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		A291B44F298441F400322E32 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		A291B451298441F900322E32 /* ValueInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueInformation.swift; sourceTree = "<group>"; };
 		A291B452298441F900322E32 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
-		A291B456298441FB00322E32 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		A291B45A2984420600322E32 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		A291B45C2984420600322E32 /* UserSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewModel.swift; sourceTree = "<group>"; };
-		A291B45D2984420600322E32 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
-		A291B45E2984420600322E32 /* DeleteAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountView.swift; sourceTree = "<group>"; };
-		A291B45F2984420600322E32 /* DeleteAccountErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountErrorMessage.swift; sourceTree = "<group>"; };
-		A291B4602984420600322E32 /* UserSettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsInteractor.swift; sourceTree = "<group>"; };
-		A291B4612984420600322E32 /* PasswordResetErrorMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetErrorMessageView.swift; sourceTree = "<group>"; };
-		A291B4632984420600322E32 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		A291B4652984420600322E32 /* UserSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsView.swift; sourceTree = "<group>"; };
-		A291B4662984420600322E32 /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
-		A291B4672984420600322E32 /* AppInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoView.swift; sourceTree = "<group>"; };
-		A291B4682984420600322E32 /* DashboardSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSettingsView.swift; sourceTree = "<group>"; };
-		A291B4892984424000322E32 /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		A291B48B2984424C00322E32 /* DeleteAccountErrorMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeleteAccountErrorMessage.swift; path = "Air-quality-monitor/Settings/UserSettings/DeleteAccountErrorMessage.swift"; sourceTree = SOURCE_ROOT; };
 		A291B48C2984424C00322E32 /* UserSettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettingsViewModel.swift; path = "Air-quality-monitor/Settings/UserSettings/UserSettingsViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		A291B48D2984424C00322E32 /* ChangePasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChangePasswordView.swift; path = "Air-quality-monitor/Settings/UserSettings/ChangePasswordView.swift"; sourceTree = SOURCE_ROOT; };
@@ -161,23 +114,25 @@
 		A291B49A2984426400322E32 /* AppInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppInfoView.swift; path = "Air-quality-monitor/Settings/Views/Subviews/AppInfoView.swift"; sourceTree = SOURCE_ROOT; };
 		A291B49B2984426400322E32 /* SettingsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsButton.swift; path = "Air-quality-monitor/Settings/Views/Subviews/SettingsButton.swift"; sourceTree = SOURCE_ROOT; };
 		A291B49C2984426400322E32 /* DashboardSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardSettingsView.swift; path = "Air-quality-monitor/Settings/Views/Subviews/DashboardSettingsView.swift"; sourceTree = SOURCE_ROOT; };
-		A291B4A82985165B00322E32 /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardView.swift; path = Views/DashboardView.swift; sourceTree = "<group>"; };
-		A291B4AA2985167C00322E32 /* DashboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
-		A291B4AC2985178F00322E32 /* PasswordResetButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetButton.swift; sourceTree = "<group>"; };
-		A291B4AD2985178F00322E32 /* BackToLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackToLoginButton.swift; sourceTree = "<group>"; };
-		A291B4AE2985178F00322E32 /* EmailFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailFieldView.swift; sourceTree = "<group>"; };
-		A291B4AF2985178F00322E32 /* GoToSignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoToSignUpView.swift; sourceTree = "<group>"; };
-		A291B4B02985178F00322E32 /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
-		A291B4B12985178F00322E32 /* LogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
-		A291B4B22985178F00322E32 /* PasswordFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordFieldView.swift; sourceTree = "<group>"; };
-		A291B4BA298518BA00322E32 /* PasswordResetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetViewModel.swift; sourceTree = "<group>"; };
+		A291B4A82985165B00322E32 /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		A291B4BC298519A000322E32 /* WeatherValuesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherValuesView.swift; sourceTree = "<group>"; };
 		A291B4BE298519D400322E32 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A291B4C029851A0900322E32 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		A291B4C229851A1700322E32 /* PasswordResetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
 		A291B4C329851A1700322E32 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		A291B4C629851A2100322E32 /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		A291B4C829851A3B00322E32 /* VerifyEmailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyEmailView.swift; sourceTree = "<group>"; };
+		A2C2CDB029852BAE00EFAD1C /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		A2C2CDB229852C2400EFAD1C /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewModel.swift; path = "Air-quality-monitor/Settings/SettingsViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		A2C2CDB429852CC700EFAD1C /* DashboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		A2C2CDB629852D5B00EFAD1C /* VerifyEmailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyEmailView.swift; sourceTree = "<group>"; };
+		A2C2CDB729852D5B00EFAD1C /* PasswordResetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetViewModel.swift; sourceTree = "<group>"; };
+		A2C2CDBA29852DEE00EFAD1C /* LogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogoView.swift; path = "Air-quality-monitor/Authentication/SignIn-UpElements/LogoView.swift"; sourceTree = SOURCE_ROOT; };
+		A2C2CDBB29852DEE00EFAD1C /* BackToLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackToLoginButton.swift; path = "Air-quality-monitor/Authentication/SignIn-UpElements/BackToLoginButton.swift"; sourceTree = SOURCE_ROOT; };
+		A2C2CDBC29852DEE00EFAD1C /* PasswordResetButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordResetButton.swift; path = "Air-quality-monitor/Authentication/SignIn-UpElements/PasswordResetButton.swift"; sourceTree = SOURCE_ROOT; };
+		A2C2CDBD29852DEE00EFAD1C /* GoToSignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoToSignUpView.swift; path = "Air-quality-monitor/Authentication/SignIn-UpElements/GoToSignUpView.swift"; sourceTree = SOURCE_ROOT; };
+		A2C2CDBE29852DEE00EFAD1C /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionButton.swift; path = "Air-quality-monitor/Authentication/SignIn-UpElements/ActionButton.swift"; sourceTree = SOURCE_ROOT; };
+		A2C2CDBF29852DEE00EFAD1C /* PasswordFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordFieldView.swift; path = "Air-quality-monitor/Authentication/SignIn-UpElements/PasswordFieldView.swift"; sourceTree = SOURCE_ROOT; };
+		A2C2CDC029852DEE00EFAD1C /* EmailFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailFieldView.swift; path = "Air-quality-monitor/Authentication/SignIn-UpElements/EmailFieldView.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,8 +181,8 @@
 				A282E0A62984367400AEEC69 /* GoogleService-Info.plist */,
 				A282E0AA2984382300AEEC69 /* Air_quality_monitorApp.swift */,
 				A291B436298440B400322E32 /* Authentication */,
-				A291B433298440B400322E32 /* ContentView.swift */,
 				A291B4BE298519D400322E32 /* ContentView.swift */,
+				A291B44F298441F400322E32 /* HeaderView.swift */,
 				A291B421298440B400322E32 /* Dashboard */,
 				A291B418298440B400322E32 /* LevelsData */,
 				A291B4592984420600322E32 /* Settings */,
@@ -257,12 +212,6 @@
 				A24A2BCE29851B64000D4868 /* PmLevel.swift */,
 				A24A2BD029851B64000D4868 /* TemperatureLevel.swift */,
 				A24A2BCC29851B64000D4868 /* VocLevel.swift */,
-				A291B419298440B400322E32 /* VocLevel.swift */,
-				A291B41A298440B400322E32 /* Co2Level.swift */,
-				A291B41B298440B400322E32 /* TemperatureLevel.swift */,
-				A291B41C298440B400322E32 /* PmLevel.swift */,
-				A291B41D298440B400322E32 /* AQILevels.swift */,
-				A291B41E298440B400322E32 /* HumidityLevel.swift */,
 			);
 			path = LevelsData;
 			sourceTree = "<group>";
@@ -270,14 +219,10 @@
 		A291B421298440B400322E32 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				A291B417298440B400322E32 /* AQIView.swift */,
-				A291B44F298441F400322E32 /* HeaderView.swift */,
+				A2C2CDB429852CC700EFAD1C /* DashboardViewModel.swift */,
 				A291B451298441F900322E32 /* ValueInformation.swift */,
 				A291B41F298440B400322E32 /* DashboardInteractor.swift */,
-				A291B4AA2985167C00322E32 /* DashboardViewModel.swift */,
-				A291B4A82985165B00322E32 /* DashboardView.swift */,
 				A291B422298440B400322E32 /* Extensions */,
-				A291B426298440B400322E32 /* DashboardViewModel.swift */,
 				A291B427298440B400322E32 /* Views */,
 				A291B42D298440B400322E32 /* Protocols */,
 			);
@@ -290,9 +235,6 @@
 				A24A2BC529851B46000D4868 /* AQIColor.swift */,
 				A24A2BC629851B46000D4868 /* GasPmColors.swift */,
 				A24A2BC729851B46000D4868 /* HumidityTemperatureColor.swift */,
-				A291B423298440B400322E32 /* AQIColor.swift */,
-				A291B424298440B400322E32 /* GasPmColors.swift */,
-				A291B425298440B400322E32 /* HumidityTemperatureColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -300,6 +242,8 @@
 		A291B427298440B400322E32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A291B4A82985165B00322E32 /* DashboardView.swift */,
+				A291B417298440B400322E32 /* AQIView.swift */,
 				A291B428298440B400322E32 /* DashboardView.swift */,
 				A291B429298440B400322E32 /* Subviews */,
 			);
@@ -312,9 +256,6 @@
 				A24A2BC329851AC8000D4868 /* CircularView.swift */,
 				A24A2BDB29851BBC000D4868 /* GasPmValuesView.swift */,
 				A291B4BC298519A000322E32 /* WeatherValuesView.swift */,
-				A291B42A298440B400322E32 /* GasPmValuesView.swift */,
-				A291B42B298440B400322E32 /* WeatherValuesView.swift */,
-				A291B42C298440B400322E32 /* CircularView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -324,24 +265,15 @@
 			children = (
 				A24A2BD829851B85000D4868 /* PmGasLevels.swift */,
 				A24A2BD729851B85000D4868 /* TempHumidityLevels.swift */,
-				A291B42E298440B400322E32 /* PmGasLevels.swift */,
-				A291B42F298440B400322E32 /* TempHumidityLevels.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		A291B430298440B400322E32 /* SignIn */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SignIn;
 			sourceTree = "<group>";
 		};
 		A291B434298440B400322E32 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				A291B431298440B400322E32 /* SignUp.swift */,
 				A291B4C029851A0900322E32 /* SignUpView.swift */,
-				A291B435298440B400322E32 /* SignUpView.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -352,15 +284,10 @@
 				A291B4C629851A2100322E32 /* SignInView.swift */,
 				A291B4C229851A1700322E32 /* PasswordResetView.swift */,
 				A291B4C329851A1700322E32 /* SessionManager.swift */,
-				A291B420298440B400322E32 /* SignInView.swift */,
-				A291B431298440B400322E32 /* SignUp.swift */,
-				A291B432298440B400322E32 /* PasswordResetView.swift */,
 				A291B434298440B400322E32 /* SignUp */,
-				A291B430298440B400322E32 /* SignIn */,
 				A291B44B2984416100322E32 /* SessionManager.swift */,
 				A291B437298440B400322E32 /* SignIn-UpElements */,
 				A291B43F298440B400322E32 /* VerifyResetCredentials */,
-				A291B442298440B400322E32 /* SessionManager.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -368,20 +295,13 @@
 		A291B437298440B400322E32 /* SignIn-UpElements */ = {
 			isa = PBXGroup;
 			children = (
-				A291B4B02985178F00322E32 /* ActionButton.swift */,
-				A291B4AD2985178F00322E32 /* BackToLoginButton.swift */,
-				A291B4AE2985178F00322E32 /* EmailFieldView.swift */,
-				A291B4AF2985178F00322E32 /* GoToSignUpView.swift */,
-				A291B4B12985178F00322E32 /* LogoView.swift */,
-				A291B4B22985178F00322E32 /* PasswordFieldView.swift */,
-				A291B4AC2985178F00322E32 /* PasswordResetButton.swift */,
-				A291B438298440B400322E32 /* PasswordFieldView.swift */,
-				A291B439298440B400322E32 /* GoToSignUpView.swift */,
-				A291B43A298440B400322E32 /* BackToLoginButton.swift */,
-				A291B43B298440B400322E32 /* PasswordResetButton.swift */,
-				A291B43C298440B400322E32 /* LogoView.swift */,
-				A291B43D298440B400322E32 /* ActionButton.swift */,
-				A291B43E298440B400322E32 /* EmailFieldView.swift */,
+				A2C2CDBE29852DEE00EFAD1C /* ActionButton.swift */,
+				A2C2CDBB29852DEE00EFAD1C /* BackToLoginButton.swift */,
+				A2C2CDC029852DEE00EFAD1C /* EmailFieldView.swift */,
+				A2C2CDBD29852DEE00EFAD1C /* GoToSignUpView.swift */,
+				A2C2CDBA29852DEE00EFAD1C /* LogoView.swift */,
+				A2C2CDBF29852DEE00EFAD1C /* PasswordFieldView.swift */,
+				A2C2CDBC29852DEE00EFAD1C /* PasswordResetButton.swift */,
 			);
 			path = "SignIn-UpElements";
 			sourceTree = "<group>";
@@ -389,10 +309,8 @@
 		A291B43F298440B400322E32 /* VerifyResetCredentials */ = {
 			isa = PBXGroup;
 			children = (
-				A291B440298440B400322E32 /* PasswordResetViewModel.swift */,
-				A291B4C829851A3B00322E32 /* VerifyEmailView.swift */,
-				A291B4BA298518BA00322E32 /* PasswordResetViewModel.swift */,
-				A291B441298440B400322E32 /* VerifyEmailView.swift */,
+				A2C2CDB729852D5B00EFAD1C /* PasswordResetViewModel.swift */,
+				A2C2CDB629852D5B00EFAD1C /* VerifyEmailView.swift */,
 			);
 			path = VerifyResetCredentials;
 			sourceTree = "<group>";
@@ -400,8 +318,7 @@
 		A291B455298441FB00322E32 /* PopupViews */ = {
 			isa = PBXGroup;
 			children = (
-				A24A2BDD29851BE6000D4868 /* LoadingView.swift */,
-				A291B456298441FB00322E32 /* LoadingView.swift */,
+				A2C2CDB029852BAE00EFAD1C /* LoadingView.swift */,
 			);
 			path = PopupViews;
 			sourceTree = "<group>";
@@ -409,8 +326,7 @@
 		A291B4592984420600322E32 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				A291B45A2984420600322E32 /* SettingsViewModel.swift */,
-				A291B4892984424000322E32 /* SettingsViewModel.swift */,
+				A2C2CDB229852C2400EFAD1C /* SettingsViewModel.swift */,
 				A291B45B2984420600322E32 /* UserSettings */,
 				A291B4622984420600322E32 /* Views */,
 			);
@@ -427,12 +343,6 @@
 				A291B48F2984424C00322E32 /* PasswordResetErrorMessageView.swift */,
 				A291B4902984424C00322E32 /* UserSettingsInteractor.swift */,
 				A291B48C2984424C00322E32 /* UserSettingsViewModel.swift */,
-				A291B45C2984420600322E32 /* UserSettingsViewModel.swift */,
-				A291B45D2984420600322E32 /* ChangePasswordView.swift */,
-				A291B45E2984420600322E32 /* DeleteAccountView.swift */,
-				A291B45F2984420600322E32 /* DeleteAccountErrorMessage.swift */,
-				A291B4602984420600322E32 /* UserSettingsInteractor.swift */,
-				A291B4612984420600322E32 /* PasswordResetErrorMessageView.swift */,
 			);
 			path = UserSettings;
 			sourceTree = "<group>";
@@ -440,7 +350,6 @@
 		A291B4622984420600322E32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A291B4632984420600322E32 /* SettingsView.swift */,
 				A291B4972984425900322E32 /* SettingsView.swift */,
 				A291B4642984420600322E32 /* Subviews */,
 			);
@@ -454,10 +363,6 @@
 				A291B49C2984426400322E32 /* DashboardSettingsView.swift */,
 				A291B49B2984426400322E32 /* SettingsButton.swift */,
 				A291B4992984426400322E32 /* UserSettingsView.swift */,
-				A291B4652984420600322E32 /* UserSettingsView.swift */,
-				A291B4662984420600322E32 /* SettingsButton.swift */,
-				A291B4672984420600322E32 /* AppInfoView.swift */,
-				A291B4682984420600322E32 /* DashboardSettingsView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -554,26 +459,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A291B4C929851A3B00322E32 /* VerifyEmailView.swift in Sources */,
-				A291B4B32985178F00322E32 /* PasswordResetButton.swift in Sources */,
 				A291B49D2984426400322E32 /* UserSettingsView.swift in Sources */,
+				A2C2CDB529852CC800EFAD1C /* DashboardViewModel.swift in Sources */,
 				A24A2BDA29851B85000D4868 /* PmGasLevels.swift in Sources */,
-				A291B4AB2985167C00322E32 /* DashboardViewModel.swift in Sources */,
+				A2C2CDC329852DEE00EFAD1C /* PasswordResetButton.swift in Sources */,
+				A2C2CDB829852D5B00EFAD1C /* VerifyEmailView.swift in Sources */,
 				A291B4A92985165B00322E32 /* DashboardView.swift in Sources */,
-				A291B4B92985178F00322E32 /* PasswordFieldView.swift in Sources */,
-				A291B447298440B400322E32 /* SignInView.swift in Sources */,
 				A291B450298441F400322E32 /* HeaderView.swift in Sources */,
 				A291B454298441F900322E32 /* ValueInformation.swift in Sources */,
+				A2C2CDB929852D5B00EFAD1C /* PasswordResetViewModel.swift in Sources */,
 				A291B4912984424C00322E32 /* DeleteAccountErrorMessage.swift in Sources */,
 				A291B4922984424C00322E32 /* UserSettingsViewModel.swift in Sources */,
+				A2C2CDC229852DEE00EFAD1C /* BackToLoginButton.swift in Sources */,
 				A24A2BCA29851B46000D4868 /* HumidityTemperatureColor.swift in Sources */,
 				A291B4A02984426400322E32 /* DashboardSettingsView.swift in Sources */,
-				A291B4BB298518BA00322E32 /* PasswordResetViewModel.swift in Sources */,
 				A291B4C729851A2100322E32 /* SignInView.swift in Sources */,
 				A291B446298440B400322E32 /* DashboardInteractor.swift in Sources */,
 				A282E0AB2984382300AEEC69 /* Air_quality_monitorApp.swift in Sources */,
 				A291B4932984424C00322E32 /* ChangePasswordView.swift in Sources */,
 				A24A2BC829851B46000D4868 /* AQIColor.swift in Sources */,
+				A2C2CDC629852DEE00EFAD1C /* PasswordFieldView.swift in Sources */,
 				A24A2BD529851B65000D4868 /* HumidityLevel.swift in Sources */,
 				A291B49E2984426400322E32 /* AppInfoView.swift in Sources */,
 				A291B4C429851A1700322E32 /* PasswordResetView.swift in Sources */,
@@ -581,33 +486,30 @@
 				A291B4BF298519D400322E32 /* ContentView.swift in Sources */,
 				A291B443298440B400322E32 /* SignUp.swift in Sources */,
 				A291B453298441F900322E32 /* ViewRouter.swift in Sources */,
+				A2C2CDC729852DEE00EFAD1C /* EmailFieldView.swift in Sources */,
 				A24A2BDC29851BBC000D4868 /* GasPmValuesView.swift in Sources */,
 				A291B4962984424C00322E32 /* UserSettingsInteractor.swift in Sources */,
 				A24A2BD929851B85000D4868 /* TempHumidityLevels.swift in Sources */,
 				A291B4C529851A1700322E32 /* SessionManager.swift in Sources */,
 				A24A2BD229851B65000D4868 /* VocLevel.swift in Sources */,
-				A291B445298440B400322E32 /* ContentView.swift in Sources */,
 				A24A2BD429851B65000D4868 /* PmLevel.swift in Sources */,
 				A24A2BD329851B65000D4868 /* Co2Level.swift in Sources */,
-				A24A2BDE29851BE6000D4868 /* LoadingView.swift in Sources */,
-				A291B4B52985178F00322E32 /* EmailFieldView.swift in Sources */,
+				A2C2CDB129852BAE00EFAD1C /* LoadingView.swift in Sources */,
 				A24A2BD129851B65000D4868 /* AQILevels.swift in Sources */,
 				A291B444298440B400322E32 /* AQIView.swift in Sources */,
 				A291B44C2984416100322E32 /* SessionManager.swift in Sources */,
 				A291B4952984424C00322E32 /* PasswordResetErrorMessageView.swift in Sources */,
 				A291B4942984424C00322E32 /* DeleteAccountView.swift in Sources */,
 				A291B4BD298519A000322E32 /* WeatherValuesView.swift in Sources */,
-				A291B448298440B400322E32 /* PasswordResetView.swift in Sources */,
-				A291B48A2984424000322E32 /* SettingsViewModel.swift in Sources */,
+				A2C2CDC529852DEE00EFAD1C /* ActionButton.swift in Sources */,
+				A2C2CDC429852DEE00EFAD1C /* GoToSignUpView.swift in Sources */,
 				A291B49F2984426400322E32 /* SettingsButton.swift in Sources */,
 				A291B4982984425900322E32 /* SettingsView.swift in Sources */,
 				A24A2BD629851B65000D4868 /* TemperatureLevel.swift in Sources */,
 				A24A2BC429851AC8000D4868 /* CircularView.swift in Sources */,
-				A291B4B82985178F00322E32 /* LogoView.swift in Sources */,
-				A291B4B42985178F00322E32 /* BackToLoginButton.swift in Sources */,
 				A24A2BC929851B46000D4868 /* GasPmColors.swift in Sources */,
-				A291B4B62985178F00322E32 /* GoToSignUpView.swift in Sources */,
-				A291B4B72985178F00322E32 /* ActionButton.swift in Sources */,
+				A2C2CDB329852C2400EFAD1C /* SettingsViewModel.swift in Sources */,
+				A2C2CDC129852DEE00EFAD1C /* LogoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
