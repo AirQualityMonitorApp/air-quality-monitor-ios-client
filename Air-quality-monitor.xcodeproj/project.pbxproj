@@ -22,7 +22,6 @@
 		A24A2BDC29851BBC000D4868 /* GasPmValuesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24A2BDB29851BBC000D4868 /* GasPmValuesView.swift */; };
 		A282E09C298435EC00AEEC69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A282E09B298435EC00AEEC69 /* Preview Assets.xcassets */; };
 		A282E0A32984366100AEEC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A282E0A22984366100AEEC69 /* Assets.xcassets */; };
-		A282E0A72984367400AEEC69 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A282E0A62984367400AEEC69 /* GoogleService-Info.plist */; };
 		A282E0AB2984382300AEEC69 /* Air_quality_monitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A282E0AA2984382300AEEC69 /* Air_quality_monitorApp.swift */; };
 		A282E0AE29843D6800AEEC69 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A282E0AD29843D6800AEEC69 /* FirebaseAuth */; };
 		A282E0B029843D6800AEEC69 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A282E0AF29843D6800AEEC69 /* FirebaseAuthCombine-Community */; };
@@ -70,7 +69,7 @@
 		A2C2CDC529852DEE00EFAD1C /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2CDBE29852DEE00EFAD1C /* ActionButton.swift */; };
 		A2C2CDC629852DEE00EFAD1C /* PasswordFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2CDBF29852DEE00EFAD1C /* PasswordFieldView.swift */; };
 		A2C2CDC729852DEE00EFAD1C /* EmailFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2CDC029852DEE00EFAD1C /* EmailFieldView.swift */; };
-		A2D37EF3298532FA0018B6BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2D37EF2298532FA0018B6BA /* GoogleService-Info.plist */; };
+		A2D37EF5298533840018B6BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2D37EF4298533840018B6BA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,7 +90,6 @@
 		A282E099298435EC00AEEC69 /* Air_quality_monitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Air_quality_monitor.entitlements; sourceTree = "<group>"; };
 		A282E09B298435EC00AEEC69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A282E0A22984366100AEEC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A282E0A62984367400AEEC69 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A282E0AA2984382300AEEC69 /* Air_quality_monitorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Air_quality_monitorApp.swift; sourceTree = "<group>"; };
 		A282E0B929843D8900AEEC69 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
 		A282E0BD29843E2300AEEC69 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Models; sourceTree = "<group>"; };
@@ -134,7 +132,7 @@
 		A2C2CDBE29852DEE00EFAD1C /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionButton.swift; path = "Air-quality-monitor/Authentication/SignIn-UpElements/ActionButton.swift"; sourceTree = SOURCE_ROOT; };
 		A2C2CDBF29852DEE00EFAD1C /* PasswordFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordFieldView.swift; path = "Air-quality-monitor/Authentication/SignIn-UpElements/PasswordFieldView.swift"; sourceTree = SOURCE_ROOT; };
 		A2C2CDC029852DEE00EFAD1C /* EmailFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailFieldView.swift; path = "Air-quality-monitor/Authentication/SignIn-UpElements/EmailFieldView.swift"; sourceTree = SOURCE_ROOT; };
-		A2D37EF2298532FA0018B6BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A2D37EF4298533840018B6BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,11 +175,10 @@
 		A282E092298435EB00AEEC69 /* Air-quality-monitor */ = {
 			isa = PBXGroup;
 			children = (
-				A2D37EF2298532FA0018B6BA /* GoogleService-Info.plist */,
+				A2D37EF4298533840018B6BA /* GoogleService-Info.plist */,
 				A282E0BE29843E5A00AEEC69 /* UIComponents */,
 				A282E0BD29843E2300AEEC69 /* Models */,
 				A282E0B929843D8900AEEC69 /* Networking */,
-				A282E0A62984367400AEEC69 /* GoogleService-Info.plist */,
 				A282E0AA2984382300AEEC69 /* Air_quality_monitorApp.swift */,
 				A291B436298440B400322E32 /* Authentication */,
 				A291B4BE298519D400322E32 /* ContentView.swift */,
@@ -449,10 +446,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A282E0A72984367400AEEC69 /* GoogleService-Info.plist in Resources */,
-				A2D37EF3298532FA0018B6BA /* GoogleService-Info.plist in Resources */,
 				A282E0A32984366100AEEC69 /* Assets.xcassets in Resources */,
 				A282E09C298435EC00AEEC69 /* Preview Assets.xcassets in Resources */,
+				A2D37EF5298533840018B6BA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
