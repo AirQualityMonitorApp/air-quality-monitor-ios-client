@@ -17,7 +17,7 @@ struct PasswordResetButton: View {
         .padding(.trailing, size.width * 0.06)
     }
 }
-// test
+
 struct PasswordResetButton_Previews: PreviewProvider {
     static var previews: some View {
         PasswordResetButton(size: CGSize(width: 200, height: 100), action: {})

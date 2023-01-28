@@ -70,6 +70,7 @@
 		A2C2CDC529852DEE00EFAD1C /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2CDBE29852DEE00EFAD1C /* ActionButton.swift */; };
 		A2C2CDC629852DEE00EFAD1C /* PasswordFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2CDBF29852DEE00EFAD1C /* PasswordFieldView.swift */; };
 		A2C2CDC729852DEE00EFAD1C /* EmailFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2CDC029852DEE00EFAD1C /* EmailFieldView.swift */; };
+		A2D37EF3298532FA0018B6BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2D37EF2298532FA0018B6BA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +134,7 @@
 		A2C2CDBE29852DEE00EFAD1C /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionButton.swift; path = "Air-quality-monitor/Authentication/SignIn-UpElements/ActionButton.swift"; sourceTree = SOURCE_ROOT; };
 		A2C2CDBF29852DEE00EFAD1C /* PasswordFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordFieldView.swift; path = "Air-quality-monitor/Authentication/SignIn-UpElements/PasswordFieldView.swift"; sourceTree = SOURCE_ROOT; };
 		A2C2CDC029852DEE00EFAD1C /* EmailFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailFieldView.swift; path = "Air-quality-monitor/Authentication/SignIn-UpElements/EmailFieldView.swift"; sourceTree = SOURCE_ROOT; };
+		A2D37EF2298532FA0018B6BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 		A282E092298435EB00AEEC69 /* Air-quality-monitor */ = {
 			isa = PBXGroup;
 			children = (
+				A2D37EF2298532FA0018B6BA /* GoogleService-Info.plist */,
 				A282E0BE29843E5A00AEEC69 /* UIComponents */,
 				A282E0BD29843E2300AEEC69 /* Models */,
 				A282E0B929843D8900AEEC69 /* Networking */,
@@ -447,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A282E0A72984367400AEEC69 /* GoogleService-Info.plist in Resources */,
+				A2D37EF3298532FA0018B6BA /* GoogleService-Info.plist in Resources */,
 				A282E0A32984366100AEEC69 /* Assets.xcassets in Resources */,
 				A282E09C298435EC00AEEC69 /* Preview Assets.xcassets in Resources */,
 			);
