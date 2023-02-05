@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A22494E6298FC59100EF5F64 /* SessionManager in Frameworks */ = {isa = PBXBuildFile; productRef = A22494E5298FC59100EF5F64 /* SessionManager */; };
+		A22494E9298FCD9900EF5F64 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = A22494E8298FCD9900EF5F64 /* Networking */; };
+		A264EAC2298FCE1000CF2CAE /* Authentication in Frameworks */ = {isa = PBXBuildFile; productRef = A264EAC1298FCE1000CF2CAE /* Authentication */; };
+		A264EAC8298FCE8F00CF2CAE /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = A264EAC7298FCE8F00CF2CAE /* Models */; };
+		A264EACA298FCE9700CF2CAE /* Utilities+Extensions in Frameworks */ = {isa = PBXBuildFile; productRef = A264EAC9298FCE9700CF2CAE /* Utilities+Extensions */; };
+		A264EACC298FCE9E00CF2CAE /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = A264EACB298FCE9E00CF2CAE /* UIComponents */; };
+		A264EACF298FD05F00CF2CAE /* Dashboard in Frameworks */ = {isa = PBXBuildFile; productRef = A264EACE298FD05F00CF2CAE /* Dashboard */; };
+		A282E09C298435EC00AEEC69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A282E09B298435EC00AEEC69 /* Preview Assets.xcassets */; };
+		A282E0A32984366100AEEC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A282E0A22984366100AEEC69 /* Assets.xcassets */; };
+		A282E0AB2984382300AEEC69 /* AirQualityMonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A282E0AA2984382300AEEC69 /* AirQualityMonitorApp.swift */; };
+		A28AAFB3298ECA5A004533B5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A28AAFB2298ECA5A004533B5 /* FirebaseAuth */; };
+		A291B450298441F400322E32 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B44F298441F400322E32 /* HeaderView.swift */; };
+		A291B4BF298519D400322E32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4BE298519D400322E32 /* ContentView.swift */; };
+		A29DAB76298FD3310019E2E8 /* Settings in Frameworks */ = {isa = PBXBuildFile; productRef = A29DAB75298FD3310019E2E8 /* Settings */; };
+		A2D37EF5298533840018B6BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2D37EF4298533840018B6BA /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A218B005298DB9AF00033260 /* AirQualityMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityMonitorTests.swift; sourceTree = "<group>"; };
+		A218B00C298DBA0800033260 /* UserSettingsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsInteractorTests.swift; sourceTree = "<group>"; };
+		A218B010298EC2C800033260 /* Authentication */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Authentication; sourceTree = "<group>"; };
+		A22494E4298FC48200EF5F64 /* SessionManager */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SessionManager; sourceTree = "<group>"; };
+		A22AB8A3298ECC8700E611C5 /* Utilities+Extensions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "Utilities+Extensions"; sourceTree = "<group>"; };
+		A264EACD298FCFEF00CF2CAE /* Dashboard */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Dashboard; sourceTree = "<group>"; };
+		A282E090298435EB00AEEC69 /* AirQualityMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQualityMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A282E099298435EC00AEEC69 /* AirQualityMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AirQualityMonitor.entitlements; sourceTree = "<group>"; };
+		A282E09B298435EC00AEEC69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A282E0A22984366100AEEC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A282E0AA2984382300AEEC69 /* AirQualityMonitorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityMonitorApp.swift; sourceTree = "<group>"; };
+		A282E0B929843D8900AEEC69 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
+		A282E0BD29843E2300AEEC69 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Models; sourceTree = "<group>"; };
+		A282E0BE29843E5A00AEEC69 /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UIComponents; sourceTree = "<group>"; };
+		A291B44F298441F400322E32 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		A291B4BE298519D400322E32 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A29DAB74298FD2A50019E2E8 /* Settings */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Settings; sourceTree = "<group>"; };
+		A2D37EF4298533840018B6BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A282E08D298435EB00AEEC69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A264EACA298FCE9700CF2CAE /* Utilities+Extensions in Frameworks */,
+				A264EACF298FD05F00CF2CAE /* Dashboard in Frameworks */,
+				A28AAFB3298ECA5A004533B5 /* FirebaseAuth in Frameworks */,
+				A264EAC2298FCE1000CF2CAE /* Authentication in Frameworks */,
+				A264EACC298FCE9E00CF2CAE /* UIComponents in Frameworks */,
+				A22494E6298FC59100EF5F64 /* SessionManager in Frameworks */,
+				A29DAB76298FD3310019E2E8 /* Settings in Frameworks */,
+				A264EAC8298FCE8F00CF2CAE /* Models in Frameworks */,
+				A22494E9298FCD9900EF5F64 /* Networking in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A218B004298DB9AF00033260 /* AirQualityMonitorTests */ = {
+			isa = PBXGroup;
+			children = (
+				A218B005298DB9AF00033260 /* AirQualityMonitorTests.swift */,
+				A218B00C298DBA0800033260 /* UserSettingsInteractorTests.swift */,
+			);
+			path = AirQualityMonitorTests;
+			sourceTree = "<group>";
+		};
+		A22494E2298FC45800EF5F64 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				A264EAC6298FCE6400CF2CAE /* Utilities */,
+				A264EAC3298FCE3800CF2CAE /* Models */,
+				A22494E7298FCD1500EF5F64 /* Features */,
+				A22494E3298FC46000EF5F64 /* Services */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		A22494E3298FC46000EF5F64 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A282E0B929843D8900AEEC69 /* Networking */,
+				A22494E4298FC48200EF5F64 /* SessionManager */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A22494E7298FCD1500EF5F64 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A29DAB74298FD2A50019E2E8 /* Settings */,
+				A264EACD298FCFEF00CF2CAE /* Dashboard */,
+				A218B010298EC2C800033260 /* Authentication */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A264EAC3298FCE3800CF2CAE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A282E0BD29843E2300AEEC69 /* Models */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A264EAC6298FCE6400CF2CAE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A22AB8A3298ECC8700E611C5 /* Utilities+Extensions */,
+				A282E0BE29843E5A00AEEC69 /* UIComponents */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A282E087298435EB00AEEC69 = {
+			isa = PBXGroup;
+			children = (
+				A282E092298435EB00AEEC69 /* AirQualityMonitor */,
+				A218B004298DB9AF00033260 /* AirQualityMonitorTests */,
+				A282E091298435EB00AEEC69 /* Products */,
+				A291B4A1298515DB00322E32 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A282E091298435EB00AEEC69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A282E090298435EB00AEEC69 /* AirQualityMonitor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A282E092298435EB00AEEC69 /* AirQualityMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				A22494E2298FC45800EF5F64 /* Packages */,
+				A2D37EF4298533840018B6BA /* GoogleService-Info.plist */,
+				A282E0AA2984382300AEEC69 /* AirQualityMonitorApp.swift */,
+				A291B4BE298519D400322E32 /* ContentView.swift */,
+				A291B44F298441F400322E32 /* HeaderView.swift */,
+				A282E0A22984366100AEEC69 /* Assets.xcassets */,
+				A282E099298435EC00AEEC69 /* AirQualityMonitor.entitlements */,
+				A282E09A298435EC00AEEC69 /* Preview Content */,
+			);
+			path = AirQualityMonitor;
+			sourceTree = "<group>";
+		};
+		A282E09A298435EC00AEEC69 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A282E09B298435EC00AEEC69 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A291B4A1298515DB00322E32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A282E08F298435EB00AEEC69 /* AirQualityMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A282E09F298435EC00AEEC69 /* Build configuration list for PBXNativeTarget "AirQualityMonitor" */;
+			buildPhases = (
+				A282E08C298435EB00AEEC69 /* Sources */,
+				A282E08D298435EB00AEEC69 /* Frameworks */,
+				A282E08E298435EB00AEEC69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirQualityMonitor;
+			packageProductDependencies = (
+				A28AAFB2298ECA5A004533B5 /* FirebaseAuth */,
+				A22494E5298FC59100EF5F64 /* SessionManager */,
+				A22494E8298FCD9900EF5F64 /* Networking */,
+				A264EAC1298FCE1000CF2CAE /* Authentication */,
+				A264EAC7298FCE8F00CF2CAE /* Models */,
+				A264EAC9298FCE9700CF2CAE /* Utilities+Extensions */,
+				A264EACB298FCE9E00CF2CAE /* UIComponents */,
+				A264EACE298FD05F00CF2CAE /* Dashboard */,
+				A29DAB75298FD3310019E2E8 /* Settings */,
+			);
+			productName = "Air-quality-monitor";
+			productReference = A282E090298435EB00AEEC69 /* AirQualityMonitor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A282E088298435EB00AEEC69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					A282E08F298435EB00AEEC69 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = A282E08B298435EB00AEEC69 /* Build configuration list for PBXProject "AirQualityMonitor" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A282E087298435EB00AEEC69;
+			packageReferences = (
+				A282E0AC29843D6800AEEC69 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = A282E091298435EB00AEEC69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A282E08F298435EB00AEEC69 /* AirQualityMonitor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A282E08E298435EB00AEEC69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A282E0A32984366100AEEC69 /* Assets.xcassets in Resources */,
+				A282E09C298435EC00AEEC69 /* Preview Assets.xcassets in Resources */,
+				A2D37EF5298533840018B6BA /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A282E08C298435EB00AEEC69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A291B450298441F400322E32 /* HeaderView.swift in Sources */,
+				A282E0AB2984382300AEEC69 /* AirQualityMonitorApp.swift in Sources */,
+				A291B4BF298519D400322E32 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A282E09D298435EC00AEEC69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A282E09E298435EC00AEEC69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		A282E0A0298435EC00AEEC69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AirQualityMonitor/AirQualityMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AirQualityMonitor/Preview Content\"";
+				DEVELOPMENT_TEAM = 2588CFNS2Y;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Pietro-Ballarin.Air-quality-monitor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A282E0A1298435EC00AEEC69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AirQualityMonitor/AirQualityMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AirQualityMonitor/Preview Content\"";
+				DEVELOPMENT_TEAM = 2588CFNS2Y;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Pietro-Ballarin.Air-quality-monitor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A282E08B298435EB00AEEC69 /* Build configuration list for PBXProject "AirQualityMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A282E09D298435EC00AEEC69 /* Debug */,
+				A282E09E298435EC00AEEC69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A282E09F298435EC00AEEC69 /* Build configuration list for PBXNativeTarget "AirQualityMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A282E0A0298435EC00AEEC69 /* Debug */,
+				A282E0A1298435EC00AEEC69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A282E0AC29843D6800AEEC69 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A22494E5298FC59100EF5F64 /* SessionManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SessionManager;
+		};
+		A22494E8298FCD9900EF5F64 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		A264EAC1298FCE1000CF2CAE /* Authentication */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Authentication;
+		};
+		A264EAC7298FCE8F00CF2CAE /* Models */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Models;
+		};
+		A264EAC9298FCE9700CF2CAE /* Utilities+Extensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "Utilities+Extensions";
+		};
+		A264EACB298FCE9E00CF2CAE /* UIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIComponents;
+		};
+		A264EACE298FD05F00CF2CAE /* Dashboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Dashboard;
+		};
+		A28AAFB2298ECA5A004533B5 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A282E0AC29843D6800AEEC69 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		A29DAB75298FD3310019E2E8 /* Settings */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Settings;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A282E088298435EB00AEEC69 /* Project object */;
+}
