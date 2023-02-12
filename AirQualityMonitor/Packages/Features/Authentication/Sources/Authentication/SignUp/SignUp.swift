@@ -1,4 +1,5 @@
 import Combine
+//import KeychainSwift
 import Models
 import Networking
 import Foundation
@@ -13,13 +14,13 @@ public class SignUp: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     func createNewUser(email: String, password: String) {
+        //let keychain = KeychainSwift()
         
         let apiClient = APIClient(baseURL: BaseUrl().url)
         
         let userBody: UserModel = UserModel(email: email, password: password)
         
         apiClient.dispatch(CreateUser(path: "/user", method: .post, body: userBody.asDictionary))
-        
             .sink(
                 receiveCompletion: { _ in
                 },

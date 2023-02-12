@@ -4,6 +4,7 @@ import Firebase
 import SessionManager
 import Settings
 import SwiftUI
+import UIComponents
 
 struct ContentView: View {
     
