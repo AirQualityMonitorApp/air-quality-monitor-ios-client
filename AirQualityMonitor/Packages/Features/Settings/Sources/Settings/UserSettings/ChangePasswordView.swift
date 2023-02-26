@@ -43,12 +43,6 @@ struct ChangePasswordView: View {
     }
 }
 
-struct ChangePasswordView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChangePasswordView(viewModel: UserSettingsViewModel(), interactor: UserSettingsInteractor(viewModel: UserSettingsViewModel(), sessionManager: SessionManager()), size: CGSize(width: 1000, height: 2000))
-    }
-}
-
 struct PasswordFieldModifier: ViewModifier {
     let size: CGSize
     func body(content: Content) -> some View {
@@ -57,3 +51,11 @@ struct PasswordFieldModifier: ViewModifier {
            .padding(.bottom, 5)
   }
 }
+
+#if DEBUG
+struct ChangePasswordView_Previews: PreviewProvider {
+    static var previews: some View {
+        ChangePasswordView(viewModel: UserSettingsViewModel(), interactor: UserSettingsInteractor(viewModel: UserSettingsViewModel(), sessionManager: SessionManager()), size: CGSize(width: 1000, height: 2000))
+    }
+}
+#endif

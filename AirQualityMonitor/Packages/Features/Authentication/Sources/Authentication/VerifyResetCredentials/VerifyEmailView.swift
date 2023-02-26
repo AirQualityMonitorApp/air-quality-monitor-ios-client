@@ -43,7 +43,6 @@ public struct VerifyEmailView: View {
         .frame(width: size.width, height: size.height, alignment: .top)
         .padding(.top, 20)
     }
-    
 }
 
 #if DEBUG

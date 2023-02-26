@@ -8,16 +8,16 @@ public class SignUp: ObservableObject {
     
     @Published public var email = ""
     @Published public var password = ""
+    @Published public var passwordRepeat = ""
+    public var errorMessage = ""
     
     public init() {}
     
     private var cancellables = Set<AnyCancellable>()
     
-    func createNewUser(email: String, password: String) {
-        //let keychain = KeychainSwift()
+    func createNewUser(email: String, password: String, passwordRepeat: String) {
         
         let apiClient = APIClient(baseURL: BaseUrl().url)
-        
         let userBody: UserModel = UserModel(email: email, password: password)
         
         apiClient.dispatch(CreateUser(path: "/user", method: .post, body: userBody.asDictionary))
@@ -27,6 +27,27 @@ public class SignUp: ObservableObject {
                 receiveValue: { _ in
                 })
             .store(in: &cancellables)
+    }
+    
+    public var isSignUpValid: Bool {
+        isEmailValid && isPasswordValidated && passwordsMatching
+    }
+    
+    public var isEmailValid: Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        return emailPredicate.evaluate(with: email)
+    }
+    
+    
+    public var isPasswordValidated: Bool {
+        let passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$"
+        let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
+        return passwordPredicate.evaluate(with: password)
+    }
+    
+    public var passwordsMatching: Bool {
+        password == passwordRepeat && !password.isEmpty
     }
 }
 

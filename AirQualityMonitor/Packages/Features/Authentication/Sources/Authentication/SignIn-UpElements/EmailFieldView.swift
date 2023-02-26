@@ -15,5 +15,4 @@ public struct EmailFieldView: View {
             .shadow(radius: 5.0, x: 5, y: 5)
             .textInputAutocapitalization(.never)
     }
-        
 }

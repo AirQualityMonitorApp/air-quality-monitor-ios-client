@@ -13,7 +13,6 @@
 		A2460ED12992FB9300D8F8AF /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A2460ED02992FB9300D8F8AF /* KeychainSwift */; };
 		A264EAC2298FCE1000CF2CAE /* Authentication in Frameworks */ = {isa = PBXBuildFile; productRef = A264EAC1298FCE1000CF2CAE /* Authentication */; };
 		A264EAC8298FCE8F00CF2CAE /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = A264EAC7298FCE8F00CF2CAE /* Models */; };
-		A264EACA298FCE9700CF2CAE /* Utilities+Extensions in Frameworks */ = {isa = PBXBuildFile; productRef = A264EAC9298FCE9700CF2CAE /* Utilities+Extensions */; };
 		A264EACF298FD05F00CF2CAE /* Dashboard in Frameworks */ = {isa = PBXBuildFile; productRef = A264EACE298FD05F00CF2CAE /* Dashboard */; };
 		A26E320F2997F27600088E09 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = A26E320E2997F27600088E09 /* UIComponents */; };
 		A282E09C298435EC00AEEC69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A282E09B298435EC00AEEC69 /* Preview Assets.xcassets */; };
@@ -23,6 +22,7 @@
 		A291B450298441F400322E32 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B44F298441F400322E32 /* HeaderView.swift */; };
 		A291B4BF298519D400322E32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4BE298519D400322E32 /* ContentView.swift */; };
 		A29DAB76298FD3310019E2E8 /* Settings in Frameworks */ = {isa = PBXBuildFile; productRef = A29DAB75298FD3310019E2E8 /* Settings */; };
+		A2C1CC5729AB633B007C8773 /* Utilities+Extensions in Frameworks */ = {isa = PBXBuildFile; productRef = A2C1CC5629AB633B007C8773 /* Utilities+Extensions */; };
 		A2D37EF5298533840018B6BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2D37EF4298533840018B6BA /* GoogleService-Info.plist */; };
 		A2F62E1B2997F57F00CA2E53 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F62E1A2997F57E00CA2E53 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
@@ -55,8 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A264EACA298FCE9700CF2CAE /* Utilities+Extensions in Frameworks */,
 				A264EACF298FD05F00CF2CAE /* Dashboard in Frameworks */,
+				A2C1CC5729AB633B007C8773 /* Utilities+Extensions in Frameworks */,
 				A2460ED12992FB9300D8F8AF /* KeychainSwift in Frameworks */,
 				A28AAFB3298ECA5A004533B5 /* FirebaseAuth in Frameworks */,
 				A26E320F2997F27600088E09 /* UIComponents in Frameworks */,
@@ -199,11 +199,11 @@
 				A22494E8298FCD9900EF5F64 /* Networking */,
 				A264EAC1298FCE1000CF2CAE /* Authentication */,
 				A264EAC7298FCE8F00CF2CAE /* Models */,
-				A264EAC9298FCE9700CF2CAE /* Utilities+Extensions */,
 				A264EACE298FD05F00CF2CAE /* Dashboard */,
 				A29DAB75298FD3310019E2E8 /* Settings */,
 				A2460ED02992FB9300D8F8AF /* KeychainSwift */,
 				A26E320E2997F27600088E09 /* UIComponents */,
+				A2C1CC5629AB633B007C8773 /* Utilities+Extensions */,
 			);
 			productName = "Air-quality-monitor";
 			productReference = A282E090298435EB00AEEC69 /* AirQualityMonitor.app */;
@@ -528,10 +528,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = Models;
 		};
-		A264EAC9298FCE9700CF2CAE /* Utilities+Extensions */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = "Utilities+Extensions";
-		};
 		A264EACE298FD05F00CF2CAE /* Dashboard */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Dashboard;
@@ -548,6 +544,10 @@
 		A29DAB75298FD3310019E2E8 /* Settings */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Settings;
+		};
+		A2C1CC5629AB633B007C8773 /* Utilities+Extensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "Utilities+Extensions";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

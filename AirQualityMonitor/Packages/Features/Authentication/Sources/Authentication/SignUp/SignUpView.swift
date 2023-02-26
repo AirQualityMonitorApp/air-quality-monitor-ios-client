@@ -1,5 +1,6 @@
 import SessionManager
 import SwiftUI
+import Utilities_Extensions
 
 public struct SignUpView: View {
     
@@ -19,8 +20,6 @@ public struct SignUpView: View {
         self.size = size
     }
     
-    //    @ObservedObject var validation: CredentialsValidation
-    
     public var body: some View {
         VStack {
             BackToLoginButton(sessionManager: sessionManager, size: size)
@@ -28,18 +27,11 @@ public struct SignUpView: View {
                 HStack {
                     VStack {
                         EmailFieldView(email: $signUp.email)
-                            .frame(width: size.width * 0.9, height: size.height * 0.07)
-                            .padding(.bottom, 5)
-                        //Text(validation.emailInvalidMessage)
-                        
+                            .modifier(InputFieldModifier(size: size))
                         PasswordFieldView(password: $signUp.password, placeholder: "Password")
-                            .frame(width: size.width * 0.9, height: size.height * 0.07)
-                            .padding(.bottom, 5)
-                        //PasswordFieldView(password: $validation.repeatPassword)
-                        //Text(validation.passwordInvalidMessage)
-                        PasswordFieldView(password: $signUp.password, placeholder: "Repeat Password")
-                            .frame(width: size.width * 0.9, height: size.height * 0.07)
-                            .padding(.bottom, 5)
+                            .modifier(InputFieldModifier(size: size))
+                        PasswordFieldView(password: $signUp.passwordRepeat, placeholder: "Repeat Password")
+                            .modifier(InputFieldModifier(size: size))
                     }
                 }
                 .padding(.vertical, 20)
@@ -48,9 +40,13 @@ public struct SignUpView: View {
                     size: size,
                     action: {
                         signUp.createNewUser(
-                            email: signUp.email, password: signUp.password
+                            email: signUp.email, password: signUp.password, passwordRepeat: signUp.passwordRepeat
                         )},
                     text: "Sign Up")
+                .disabled(!signUp.isSignUpValid)
+                .opacity(signUp.isSignUpValid ? 1.0 : 0.5)
+                
+                ValidationList(isEmailValid: signUp.isEmailValid, isPasswordValid: signUp.isPasswordValidated, passwordsMatching: signUp.passwordsMatching)
             }
             .frame(width: size.width, height: size.height * 0.6, alignment: .center)
             .padding(.top, 0)
@@ -60,4 +56,13 @@ public struct SignUpView: View {
         .frame(width: size.width, height: size.height, alignment: .top)
         .padding(.top, 20)
     }
+}
+
+fileprivate struct InputFieldModifier: ViewModifier {
+    let size: CGSize
+    func body(content: Content) -> some View {
+      content
+           .frame(width: size.width * 0.9, height: size.height * 0.07)
+           .padding(.bottom, 5)
+  }
 }
