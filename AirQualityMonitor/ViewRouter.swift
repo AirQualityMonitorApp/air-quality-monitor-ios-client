@@ -32,16 +32,7 @@ struct ViewRouter: View {
                     width: size.width,
                     dashboardViewHeight: size.height * 0.8
                 )
-                .onAppear {
-                    Task {
-                        await dashboardInteractor.updateAirQualityData()
-                    }
-                }
-                .onReceive(dashboardInteractor.timer, perform: { _ in
-                    Task {
-                        await dashboardInteractor.updateAirQualityData()
-                    }
-                })
+                
                 .tabItem() {
                     Image(systemName: "house.fill")
                     Text("Dashboard")
@@ -56,6 +47,16 @@ struct ViewRouter: View {
                 }
             }.accentColor(.green)
         }
+        .onAppear {
+            Task {
+                await dashboardInteractor.updateAirQualityData()
+            }
+        }
+        .onReceive(dashboardInteractor.timer, perform: { _ in
+            Task {
+                await dashboardInteractor.updateAirQualityData()
+            }
+        })
         .background(Color.green.ignoresSafeArea())
     }
 }

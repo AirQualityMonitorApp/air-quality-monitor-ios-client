@@ -24,11 +24,24 @@ public struct SettingsView: View {
                     AppInfoView()
                 }
                 .font(.bodyH4)
-                .listStyle(GroupedListStyle())
+                .modifier(SettingsListStyle())
             }
         }
     }
 }
+
+private struct SettingsListStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            content
+                .listStyle(PlainListStyle())
+        } else {
+            content
+            .listStyle(GroupedListStyle())
+        }
+  }
+}
+
 
 
 

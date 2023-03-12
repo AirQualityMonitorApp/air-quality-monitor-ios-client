@@ -125,7 +125,6 @@ public extension SessionManager {
             self.appState = .unauthorized
             return self.logOut()
         }
-        await self.listen()
         self.appState = .authorized
         self.refreshJwtToken(user: userInSession)
     }
@@ -144,7 +143,7 @@ public extension SessionManager {
         }
     }
     
-    public func checkJwtExpirationDate() async {
+    func checkJwtExpirationDate() async {
         
         guard self.userID != "" else {
             return self.logOut()
@@ -174,7 +173,7 @@ public extension SessionManager {
 }
 
 public extension SessionManager {
-    public func checkSessionOnStartup() async {
+    func checkSessionOnStartup() async {
         guard self.isUserVerfied != false else { return }
         guard self.session != nil else { return }
         if self.jwtValidity == .expired {
@@ -183,7 +182,7 @@ public extension SessionManager {
         self.appState = .authorized
     }
     
-    public func checkUserIsVerified() {
+    func checkUserIsVerified() {
         guard self.isUserVerfied else {
            return self.appState = .verifyEmail
         }

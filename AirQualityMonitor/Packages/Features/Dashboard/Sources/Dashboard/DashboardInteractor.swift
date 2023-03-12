@@ -12,13 +12,10 @@ public class DashboardInteractor {
     public let sessionManager: SessionManager
     public let settingsViewModel: SettingsView.SettingsViewModel
     
-    public let dataLoader: DataLoader
-    
-    public init(viewModel: DashboardView.DashboardViewModel, settingsViewModel: SettingsView.SettingsViewModel, sessionManager: SessionManager, dataLoader: DataLoader) {
+    public init(viewModel: DashboardView.DashboardViewModel, settingsViewModel: SettingsView.SettingsViewModel, sessionManager: SessionManager) {
         self.viewModel = viewModel
         self.settingsViewModel = settingsViewModel
         self.sessionManager = sessionManager
-        self.dataLoader = dataLoader
     }
     
     public var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
@@ -40,12 +37,22 @@ public class DashboardInteractor {
     
     public func updateAirQualityData() async {
         await sessionManager.checkSessionBeforeUpdating()
-        await self.loadAirQualityData(userId: sessionManager.userID)
+        await self.loadAirQualityData()
     }
     
-    private func loadAirQualityData(userId: String) async {
-        await dataLoader.fetchAirQualityData(userId: userId, sessionManager: sessionManager)
-        self.assignAirQualityData(data: dataLoader.airQualityData)
+    private func loadAirQualityData() async {
+        await self.fetchAirQualityData(sessionManager: sessionManager)
+    }
+    
+    public func fetchAirQualityData(sessionManager: SessionManager) async {
+        let apiClient = APIClient(baseURL: BaseUrl().url)
+        apiClient.dispatch(FetchData(path: "/api/my", authToken: sessionManager.authToken, method: .get, userId: sessionManager.userID))
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { _ in
+            }, receiveValue: { data in
+                self.assignAirQualityData(data: data)
+            })
+            .store(in: &cancellables)
     }
 }
 
@@ -55,17 +62,21 @@ public class DataLoader: ObservableObject {
     @Published public var airQualityData = [FetchData.ReturnType]()
     public var cachedHistoryData = [AirQuality]()
     
-    public init() {}
+    private let dashboardInteractor: DashboardInteractor
+    
+    public init(dashboardInteractor: DashboardInteractor) {
+        self.dashboardInteractor = dashboardInteractor
+    }
     
     private var cancellables = Set<AnyCancellable>()
     
-    public func fetchAirQualityData(userId: String, sessionManager: SessionManager) async {
+    public func fetchAirQualityData(sessionManager: SessionManager) async {
         let apiClient = APIClient(baseURL: BaseUrl().url)
-        apiClient.dispatch(FetchData(path: "/api/my", authToken: sessionManager.authToken, method: .get, userId: userId))
+        apiClient.dispatch(FetchData(path: "/api/my", authToken: sessionManager.authToken, method: .get, userId: sessionManager.userID))
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { _ in
             }, receiveValue: { data in
-                self.airQualityData = data
+                self.dashboardInteractor.assignAirQualityData(data: data)
             })
             .store(in: &cancellables)
     }

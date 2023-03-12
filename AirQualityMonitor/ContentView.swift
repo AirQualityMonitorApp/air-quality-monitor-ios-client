@@ -14,7 +14,6 @@ struct ContentView: View {
     @ObservedObject var signUp: SignUp
     @ObservedObject var verifyResetCredentialsViewModel: VerifyResetCredentialsViewModel
     @StateObject var dashboardViewModel: DashboardView.DashboardViewModel
-    @StateObject var dataLoader: DataLoader
     
     @State var isErrorPresented = NetworkManager.shared.networkState == .notConnected ? true : false
     
@@ -27,7 +26,7 @@ struct ContentView: View {
                     ViewRouter(
                         settingsViewModel: settingsViewModel,
                         sessionManager: sessionManager,
-                        dashboardInteractor: DashboardInteractor(viewModel: dashboardViewModel, settingsViewModel: settingsViewModel, sessionManager: sessionManager, dataLoader: dataLoader),
+                        dashboardInteractor: DashboardInteractor(viewModel: dashboardViewModel, settingsViewModel: settingsViewModel, sessionManager: sessionManager),
                         size: geometry.size
                     )
                 case .unauthorized:
@@ -71,7 +70,7 @@ extension ContentView {
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(settingsViewModel: SettingsView.SettingsViewModel(), sessionManager: SessionManager(), signUp: SignUp(), verifyResetCredentialsViewModel: VerifyResetCredentialsViewModel(), dashboardViewModel: DashboardView.DashboardViewModel(settingsViewModel: SettingsView.SettingsViewModel()), dataLoader: DataLoader())
+        ContentView(settingsViewModel: SettingsView.SettingsViewModel(), sessionManager: SessionManager(), signUp: SignUp(), verifyResetCredentialsViewModel: VerifyResetCredentialsViewModel(), dashboardViewModel: DashboardView.DashboardViewModel(settingsViewModel: SettingsView.SettingsViewModel()))
     }
 }
 #endif

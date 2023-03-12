@@ -30,8 +30,7 @@ struct AirQualityMonitorApp: App {
                 sessionManager: sessionManager,
                 signUp: signUp,
                 verifyResetCredentialsViewModel: passwordResetViewModel,
-                dashboardViewModel: DashboardView.DashboardViewModel(settingsViewModel: settingsViewModel),
-                dataLoader: DataLoader()
+                dashboardViewModel: DashboardView.DashboardViewModel(settingsViewModel: settingsViewModel)
             )
         }
     }
