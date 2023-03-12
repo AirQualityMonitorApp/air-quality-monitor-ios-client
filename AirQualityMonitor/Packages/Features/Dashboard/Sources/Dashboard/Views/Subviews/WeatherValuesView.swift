@@ -2,7 +2,7 @@ import SwiftUI
 
 struct WeatherValuesView: View {
     
-    var flexibleLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
+    var flexibleLayout = [GridItem(.flexible()), GridItem(.flexible())]
     var valueViewHeight: CGFloat
     var width: CGFloat
     @ObservedObject var viewModel: DashboardView.DashboardViewModel
@@ -22,13 +22,6 @@ struct WeatherValuesView: View {
                     value: viewModel.temp)
             })
             
-            CircularCardView(
-                displayedData: viewModel.humidity,
-                parentViewHeight: valueViewHeight,
-                width: width * 0.3,
-                color: viewModel.humidityColor,
-                valueInformation:  HumidityValueInformation()
-            )
             CircularCardView(
                 displayedData: viewModel.humidity,
                 parentViewHeight: valueViewHeight,

@@ -29,16 +29,19 @@ struct ChangePasswordView: View {
                         interactor.changePassword()
                     },
                     text: "Change Password")
+                .disabled(!viewModel.isNewPasswordValid)
+                .opacity(viewModel.isNewPasswordValid ? 1.0 : 0.5)
                 HStack {
                     ChangePasswordErrorMessage(viewModel: viewModel)
                 }
                 .padding(.top, 10)
+                ChangePasswordValidationList(isPasswordValid: viewModel.isNewPasswordValidated, passwordsMatching: viewModel.newPasswordsMatching)
             }
             .frame(width: size.width, height: size.height * 0.6, alignment: .center)
             .padding(.top, 0)
         }
         .background(Color.white)
-        .frame(width: size.width, height: size.height, alignment: .top)
+        .frame(width: size.width, height: size.height * 0.7, alignment: .top)
         .padding(.top, 20)
     }
 }

@@ -132,8 +132,8 @@ extension NetworkDispatcher {
 
 public struct APIClient {
     
-    public var baseURL: String!
-    public var networkDispatcher: NetworkDispatcher!
+    public var baseURL: String
+    public var networkDispatcher: NetworkDispatcher
     public init(baseURL: String,
          networkDispatcher: NetworkDispatcher = NetworkDispatcher()) {
         self.baseURL = baseURL

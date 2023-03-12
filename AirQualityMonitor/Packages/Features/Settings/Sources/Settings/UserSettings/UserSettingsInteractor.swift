@@ -22,9 +22,6 @@ public class UserSettingsInteractor {
     private var cancellables = Set<AnyCancellable>()
     
     func changePassword() {
-        guard viewModel.newPassword == viewModel.newPasswordRepeat else {
-            return viewModel.changePasswordErrorMessage = .newPasswordNotMatching
-        }
         reauthenticateUser(password: viewModel.oldPassword, newPassword: viewModel.newPassword, action: updatePasswordOnFirebase)
     }
     

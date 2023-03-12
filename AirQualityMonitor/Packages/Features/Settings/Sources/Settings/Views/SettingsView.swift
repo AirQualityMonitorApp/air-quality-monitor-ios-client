@@ -23,7 +23,6 @@ public struct SettingsView: View {
                     UserSettingsView(sessionManager: sessionManager, viewModel: viewModel, size: size)
                     AppInfoView()
                 }
-                .background(Color.green.ignoresSafeArea())
                 .font(.bodyH4)
                 .listStyle(GroupedListStyle())
             }

@@ -4,10 +4,10 @@ import UIComponents
 
 struct CircularCardView: View {
     
-    var displayedData: Double
-    var parentViewHeight: CGFloat
-    var width: CGFloat
-    var color: Color
+    let displayedData: Double
+    let parentViewHeight: CGFloat
+    let width: CGFloat
+    let color: Color
     
     var valueInformation: ValueInformation
     
@@ -34,16 +34,20 @@ struct CircularCardView: View {
                     .animation(.easeInOut(duration: 2))
             }.overlay(
                 VStack {
-                    Text(String(displayedData))
-                        .foregroundColor(.fontPrimary)
-                        .font(.bodyLightH5)
-                    Text(valueInformation.unitMeasure)
-                        .font(.bodyLightH5)
-                        .foregroundColor(.fontPrimary)
+                    createStyledText(with: String(displayedData), .fontPrimary, .bodyLightH5)
+                    createStyledText(with: valueInformation.unitMeasure, .fontPrimary, .bodyLightH5)
                 }
             )
             .padding(EdgeInsets(top: 8, leading: 6, bottom: 4, trailing: 6))
         }
         .frame(width: width, height: parentViewHeight)
+    }
+}
+
+extension View {
+    func createStyledText(with text: String, _ color: Color, _ font: Font) -> some View {
+        return Text(String(text))
+            .foregroundColor(color)
+            .font(font)
     }
 }

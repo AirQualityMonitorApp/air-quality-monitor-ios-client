@@ -18,10 +18,6 @@ struct ChangePasswordErrorMessage: View {
             Text("The current password is not correct")
                 .font(.bodyLightH5)
                 .foregroundColor(.red)
-        case .newPasswordNotMatching:
-            Text("The new password is not matching")
-                .font(.bodyLightH5)
-                .foregroundColor(.red)
         case .success:
             Text("The password has been successfully modified!")
                 .font(.bodyLightH5)

@@ -8,7 +8,6 @@ import SwiftUI
 public enum AppState {
     case authorized
     case unauthorized
-    case signingIn
     case signinUp
     case passwordReset
     case verifyEmail
@@ -70,7 +69,7 @@ public enum AppState {
 public extension SessionManager {
     
     func signIn() {
-        self.appState = .signingIn
+        self.appState = .loading
         self.firebaseSignIn(email: self.email, password: self.password, handler: { (result, error) in
             result.map { val in
                 self.isUserVerfied = val.user.isEmailVerified
@@ -93,7 +92,7 @@ public extension SessionManager {
         })
     }
     
-    public func getAuthToken(value: AuthDataResult) {
+    func getAuthToken(value: AuthDataResult) {
         value.user.getIDToken() { token, error in
             guard (token != nil) else {
                 return
@@ -103,8 +102,8 @@ public extension SessionManager {
         }
     }
     
-    public func logOut() {
-        self.appState = .signingIn
+    func logOut() {
+        self.appState = .loading
         do {
             try Auth.auth().signOut()
             self.unbind()
@@ -121,17 +120,17 @@ public extension SessionManager {
         self.appState = .unauthorized
     }
     
-    public func refreshUserAuthorization() async {
+    func refreshUserAuthorization() async {
         guard let userInSession = Auth.auth().currentUser else {
             self.appState = .unauthorized
             return self.logOut()
         }
-        self.listen()
+        await self.listen()
         self.appState = .authorized
         self.refreshJwtToken(user: userInSession)
     }
     
-    public func refreshJwtToken(user: Firebase.User) {
+    func refreshJwtToken(user: Firebase.User) {
         user.getIDTokenForcingRefresh(true) {
             token, error in
             guard (token != nil) else {
@@ -161,6 +160,16 @@ public extension SessionManager {
         } else {
             self.jwtValidity = .valid
         }
+    }
+}
+
+public extension SessionManager {
+    func checkSessionBeforeUpdating() async {
+        guard self.session != nil else { return }
+        if self.jwtValidity == .expired {
+            return await self.refreshUserAuthorization()
+        }
+        await self.checkJwtExpirationDate()
     }
 }
 

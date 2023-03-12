@@ -56,5 +56,6 @@ struct ViewRouter: View {
                 }
             }.accentColor(.green)
         }
+        .background(Color.green.ignoresSafeArea())
     }
 }

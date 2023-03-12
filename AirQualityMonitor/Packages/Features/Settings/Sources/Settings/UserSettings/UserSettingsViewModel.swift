@@ -15,6 +15,20 @@ public class UserSettingsViewModel: ObservableObject, UserSettingsViewType {
     public func toggleAlert() {
         self.isAlert = true
     }
+    
+    public var isNewPasswordValidated: Bool {
+        let passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$"
+        let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
+        return passwordPredicate.evaluate(with: newPassword)
+    }
+    
+    public var newPasswordsMatching: Bool {
+        newPassword == newPasswordRepeat && !newPassword.isEmpty
+    }
+    
+    public var isNewPasswordValid: Bool {
+        isNewPasswordValidated && newPasswordsMatching
+    }
 }
 
 public protocol UserSettingsViewType {
@@ -33,6 +47,5 @@ public enum UserSettingsErrorMessage {
     case none
     case error
     case wrongPassword
-    case newPasswordNotMatching
     case success
 }
