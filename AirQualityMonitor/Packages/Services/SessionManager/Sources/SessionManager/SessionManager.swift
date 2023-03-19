@@ -41,7 +41,6 @@ public enum AppState {
     public func listen() {
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             if let user = user {
-                print("Got user: \(user)")
                 self.session = Models.User(
                     uid: user.uid
                 )

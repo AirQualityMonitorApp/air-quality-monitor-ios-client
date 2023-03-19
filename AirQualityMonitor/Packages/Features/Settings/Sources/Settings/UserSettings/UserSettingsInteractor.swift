@@ -71,14 +71,10 @@ public class UserSettingsInteractor {
     private func deleteDatabaseDocument(userId: String) {
         
         let apiClient = APIClient(baseURL: BaseUrl().url)
-        apiClient.dispatch(DeleteAccount(path: "/deleteUser", authToken: sessionManager.authToken, method: .delete, userId: sessionManager.userID))
+        apiClient.dispatch(DeleteAccount(path: "/api/my/delete-user", authToken: sessionManager.authToken, method: .delete, userId: sessionManager.userID))
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: {
-                value in
-                
-                print(value)
-            }, receiveValue: { val in
-                print(val)
+            .sink(receiveCompletion: { _ in
+            }, receiveValue: { _ in
             })
             .store(in: &cancellables)
     }

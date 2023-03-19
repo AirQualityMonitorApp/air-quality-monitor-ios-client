@@ -29,6 +29,10 @@
       customLLDBInitFile = "/Users/pietroballarin/Projects/Air Quality Monitor/air-quality-monitor-ios-client/AirQualityMonitorTests"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
+         <TestPlanReference
+            reference = "container:AirQualityMonitorUITests/AirQualityMonitor.xctestplan"
+            default = "YES">
+         </TestPlanReference>
       </TestPlans>
       <Testables>
          <TestableReference
@@ -39,6 +43,17 @@
                BlueprintIdentifier = "A218B002298DB9AF00033260"
                BuildableName = "AirQualityMonitorTests.xctest"
                BlueprintName = "AirQualityMonitorTests"
+               ReferencedContainer = "container:AirQualityMonitor.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A255D98829C745F600AE0A88"
+               BuildableName = "AirQualityMonitorUITests.xctest"
+               BlueprintName = "AirQualityMonitorUITests"
                ReferencedContainer = "container:AirQualityMonitor.xcodeproj">
             </BuildableReference>
          </TestableReference>

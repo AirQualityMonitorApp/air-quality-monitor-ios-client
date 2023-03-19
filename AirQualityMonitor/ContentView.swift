@@ -21,31 +21,7 @@ struct ContentView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                switch sessionManager.appState {
-                case .authorized:
-                    ViewRouter(
-                        settingsViewModel: settingsViewModel,
-                        sessionManager: sessionManager,
-                        dashboardInteractor: DashboardInteractor(viewModel: dashboardViewModel, settingsViewModel: settingsViewModel, sessionManager: sessionManager),
-                        size: geometry.size
-                    )
-                case .unauthorized:
-                    SignInView(sessionManager: sessionManager, size: geometry.size)
-                        .onAppear {
-                            Task {
-                                await sessionManager.checkSessionOnStartup()
-                            }
-                        }
-                case .signinUp:
-                    SignUpView(signUp: signUp, sessionManager: sessionManager, size: geometry.size)
-                case .verifyEmail:
-                    VerifyEmailView(viewModel: verifyResetCredentialsViewModel, sessionManager: sessionManager, size: geometry.size)
-                case .passwordReset:
-                    PasswordResetView(viewModel: verifyResetCredentialsViewModel, sessionManager: sessionManager, size: geometry.size)
-                case .loading:
-                    LoadingView(width: geometry.size.width, height: geometry.size.height)
-                case .error: EmptyView()
-                }
+                self.viewSwitch(size: geometry.size)
             }.onAppear{
                     getUser()
             }
@@ -64,6 +40,35 @@ struct ContentView: View {
 extension ContentView {
     func getUser() {
         sessionManager.listen()
+    }
+    
+    @ViewBuilder
+    func viewSwitch(size: CGSize) -> some View {
+        switch sessionManager.appState {
+        case .authorized:
+            ViewRouter(
+                settingsViewModel: settingsViewModel,
+                sessionManager: sessionManager,
+                dashboardInteractor: DashboardInteractor(viewModel: dashboardViewModel, settingsViewModel: settingsViewModel, sessionManager: sessionManager),
+                size: size
+            )
+        case .unauthorized:
+            SignInView(sessionManager: sessionManager, size: size)
+                .onAppear {
+                    Task {
+                        await sessionManager.checkSessionOnStartup()
+                    }
+                }
+        case .signinUp:
+            SignUpView(signUp: signUp, sessionManager: sessionManager, size: size)
+        case .verifyEmail:
+            VerifyEmailView(viewModel: verifyResetCredentialsViewModel, sessionManager: sessionManager, size: size)
+        case .passwordReset:
+            PasswordResetView(viewModel: verifyResetCredentialsViewModel, sessionManager: sessionManager, size: size)
+        case .loading:
+            LoadingView(width: size.width, height: size.height)
+        case .error: EmptyView()
+        }
     }
 }
 

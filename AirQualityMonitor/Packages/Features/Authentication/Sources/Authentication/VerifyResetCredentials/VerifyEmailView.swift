@@ -32,7 +32,7 @@ public struct VerifyEmailView: View {
                 ActionButton(
                     size: size,
                     action: {
-                        viewModel.verifyEmailResetPassword(path: "/verifyEmail")
+                        viewModel.verifyEmailResetPassword(path: "/api/verify-email")
                         sessionManager.appState = .unauthorized
                     },
                     text: "Send again")

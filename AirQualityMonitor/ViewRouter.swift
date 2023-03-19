@@ -7,10 +7,11 @@ import UIKit
 
 struct ViewRouter: View {
     
+    @Environment(\.scenePhase) var scenePhase
+    
     @ObservedObject var settingsViewModel: SettingsView.SettingsViewModel
     @ObservedObject var sessionManager: SessionManager
     var dashboardInteractor: DashboardInteractor
-    
     
     let size: CGSize
     
@@ -32,7 +33,6 @@ struct ViewRouter: View {
                     width: size.width,
                     dashboardViewHeight: size.height * 0.8
                 )
-                
                 .tabItem() {
                     Image(systemName: "house.fill")
                     Text("Dashboard")
@@ -50,6 +50,13 @@ struct ViewRouter: View {
         .onAppear {
             Task {
                 await dashboardInteractor.updateAirQualityData()
+            }
+        }
+        .onChange(of: scenePhase) { newScenePhase in
+            if newScenePhase == .active {
+                Task {
+                    await dashboardInteractor.updateAirQualityData()
+                }
             }
         }
         .onReceive(dashboardInteractor.timer, perform: { _ in

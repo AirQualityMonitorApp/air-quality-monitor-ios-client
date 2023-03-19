@@ -20,7 +20,7 @@ public class SignUp: ObservableObject {
         let apiClient = APIClient(baseURL: BaseUrl().url)
         let userBody: UserModel = UserModel(email: email, password: password)
         
-        apiClient.dispatch(CreateUser(path: "/user", method: .post, body: userBody.asDictionary))
+        apiClient.dispatch(CreateUser(path: "/api/create-user", method: .post, body: userBody.asDictionary))
             .sink(
                 receiveCompletion: { _ in
                 },

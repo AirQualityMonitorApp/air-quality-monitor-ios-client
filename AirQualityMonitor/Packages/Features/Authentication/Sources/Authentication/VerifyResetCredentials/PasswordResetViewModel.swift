@@ -19,13 +19,10 @@ public class VerifyResetCredentialsViewModel: ObservableObject {
         apiClient.dispatch(VerifyReset(path: path, method: .post, body: ["email": self.email]))
             .receive(on: DispatchQueue.main)
             .sink(
-                receiveCompletion: { val in
-                    print(val)
+                receiveCompletion: { _ in
                     self.emailLinkIsSent = true
                 },
-                receiveValue: { val in
-                    print(val)
-                    
+                receiveValue: { _ in
                 })
             .store(in: &cancellables)
     }

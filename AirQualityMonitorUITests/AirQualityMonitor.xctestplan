@@ -1,0 +1,32 @@
+{
+  "configurations" : [
+    {
+      "id" : "B0B38B27-76D7-42D7-9512-DDB2C1F74835",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "enabled" : false,
+      "target" : {
+        "containerPath" : "container:AirQualityMonitor\/Packages\/Features\/Dashboard",
+        "identifier" : "DashboardTests",
+        "name" : "DashboardTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:AirQualityMonitor.xcodeproj",
+        "identifier" : "A255D98829C745F600AE0A88",
+        "name" : "AirQualityMonitorUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

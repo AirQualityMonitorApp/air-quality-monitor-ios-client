@@ -32,7 +32,7 @@ public struct PasswordResetView: View {
                 ActionButton(
                     size: size,
                     action: {
-                        viewModel.verifyEmailResetPassword(path: "/resetPassword")
+                        viewModel.verifyEmailResetPassword(path: "/api/reset-password")
                     },
                     text: "Reset")
                 Text("If a user account is connected to this email address you will receive a link to reset your password.")
