@@ -8,9 +8,11 @@ struct AppInfoView: View {
             HStack {
                 Text("Version:")
                     .font(.footnoteH6)
+                    .foregroundColor(.fontPrimary)
                 Spacer()
                 Text("1.0.0")
                     .font(.footnoteH7)
+                    .foregroundColor(.fontPrimary)
             }
         }
     }

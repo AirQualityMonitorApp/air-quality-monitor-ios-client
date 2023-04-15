@@ -10,11 +10,11 @@ final class AQMUITestsDashboard: XCTestCase {
         app.launch()
         
         // Check if all the values titles are present
-        XCTAssertEqual(app.buttons["Temperature"].exists, true)
-        XCTAssertEqual(app.buttons["Humidity"].exists, true)
-        XCTAssertEqual(app.buttons["CO²"].exists, true)
-        XCTAssertEqual(app.buttons["VOC Index"].exists, true)
-        XCTAssertEqual(app.buttons["PM2.5"].exists, true)
+        XCTAssertEqual(app.staticTexts["Temperature"].exists, true)
+        XCTAssertEqual(app.staticTexts["Humidity"].exists, true)
+        XCTAssertEqual(app.staticTexts["CO²"].exists, true)
+        XCTAssertEqual(app.staticTexts["VOC Index"].exists, true)
+        XCTAssertEqual(app.staticTexts["PM2.5"].exists, true)
         
         //Check for the tabbar and click on "settings"
         XCTAssert(app.tabBars.element.exists, "Tab bar does not exist.")
@@ -44,8 +44,8 @@ final class AQMUITestsDashboard: XCTestCase {
         
         // Go back to the dashboard and check if the weather values are not present
         app.buttons["Dashboard"].tap()
-        XCTAssertEqual(app.buttons["Temperature"].exists, false)
-        XCTAssertEqual(app.buttons["Humidity"].exists, false)
+        XCTAssertEqual(app.staticTexts["Temperature"].exists, false)
+        XCTAssertEqual(app.staticTexts["Humidity"].exists, false)
     }
     
     func testDashboardWithourGasPmValues() {
@@ -66,9 +66,9 @@ final class AQMUITestsDashboard: XCTestCase {
         
         // Go back to the dashboard and check if the weather values are not present
         app.buttons["Dashboard"].tap()
-        XCTAssertEqual(app.buttons["VOC"].exists, false)
-        XCTAssertEqual(app.buttons["CO²"].exists, false)
-        XCTAssertEqual(app.buttons["PM2.5"].exists, false)
+        XCTAssertEqual(app.staticTexts["VOC"].exists, false)
+        XCTAssertEqual(app.staticTexts["CO²"].exists, false)
+        XCTAssertEqual(app.staticTexts["PM2.5"].exists, false)
     }
 }
 

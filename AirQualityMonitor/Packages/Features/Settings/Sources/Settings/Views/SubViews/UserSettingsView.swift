@@ -16,13 +16,16 @@ struct UserSettingsView: View {
                 HStack {
                     Text("User-ID:")
                         .font(.footnoteH6)
+                        .foregroundColor(.fontPrimary)
                     Spacer()
                     Text(sessionManager.userID)
                         .font(.footnoteH7)
+                        .foregroundColor(.fontPrimary)
                 }
                 NavigationLink(destination: ChangePasswordView(viewModel: userSettingsViewModel, interactor: UserSettingsInteractor(viewModel: userSettingsViewModel, sessionManager: sessionManager), size: size)) {
                     Text("Change password")
                         .font(.footnoteH6)
+                        .foregroundColor(.fontPrimary)
                 }
                 SettingsButton(
                     text: "Log out",
@@ -33,6 +36,7 @@ struct UserSettingsView: View {
                 NavigationLink(destination: DeleteAccountView(viewModel: userSettingsViewModel, interactor: UserSettingsInteractor(viewModel: userSettingsViewModel, sessionManager: sessionManager), size: size)) {
                     Text("Delete Account")
                         .font(.footnoteH6)
+                        .foregroundColor(.red)
                 }
             }
     }

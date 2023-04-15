@@ -35,6 +35,7 @@ public extension Font {
     static let titleH2 = custom(.semiBold, relativeTo: .title)
     static let headlineH3 = custom(.medium, relativeTo: .headline)
     static let bodyH4 = custom(.regular, relativeTo: .body)
+    static let bodyMediumH5 = custom(.medium, relativeTo: .body)
     static let bodyLightH5 = custom(.light, relativeTo: .body)
     static let footnoteH6 = custom(.regular, relativeTo: .footnote)
     static let footnoteH7 = custom(.light, relativeTo: .footnote)

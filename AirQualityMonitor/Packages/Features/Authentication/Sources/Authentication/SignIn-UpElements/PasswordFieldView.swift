@@ -1,4 +1,5 @@
 import SwiftUI
+import UIComponents
 
 public struct PasswordFieldView: View {
     
@@ -14,8 +15,9 @@ public struct PasswordFieldView: View {
         
         SecureField(placeholder, text: password)
             .font(.bodyH4)
+            //.foregroundColor(.fontT)
             .padding()
-            .background()
+            .background(.white)
             .cornerRadius(10.0)
             .shadow(radius: 5.0, x: 5, y: 5)
     }

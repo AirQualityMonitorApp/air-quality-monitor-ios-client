@@ -20,6 +20,7 @@ struct ChangePasswordValidationList: View {
             HStack {
                 Text("Matching passwords")
                     .font(.footnoteH7)
+                    .foregroundColor(.fontPrimary)
                 Spacer()
                 Image(systemName: passwordsMatching ? "checkmark.circle.fill" : "xmark.circle.fill")
                     .foregroundColor(passwordsMatching ? .green : .red)

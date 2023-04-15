@@ -33,7 +33,6 @@ struct ContentView: View {
             Color.white
         )
         .edgesIgnoringSafeArea(.all)
-        
     }
 }
 

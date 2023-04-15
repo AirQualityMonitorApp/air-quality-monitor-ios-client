@@ -40,7 +40,7 @@ struct ChangePasswordView: View {
             .frame(width: size.width, height: size.height * 0.6, alignment: .center)
             .padding(.top, 0)
         }
-        .background(Color.white)
+        .background(Color.backgroundPrimary)
         .frame(width: size.width, height: size.height * 0.7, alignment: .top)
         .padding(.top, 20)
     }

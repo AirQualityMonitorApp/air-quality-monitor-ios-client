@@ -18,13 +18,12 @@
 		A264EAC8298FCE8F00CF2CAE /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = A264EAC7298FCE8F00CF2CAE /* Models */; };
 		A264EACF298FD05F00CF2CAE /* Dashboard in Frameworks */ = {isa = PBXBuildFile; productRef = A264EACE298FD05F00CF2CAE /* Dashboard */; };
 		A26E320F2997F27600088E09 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = A26E320E2997F27600088E09 /* UIComponents */; };
-		A282E09C298435EC00AEEC69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A282E09B298435EC00AEEC69 /* Preview Assets.xcassets */; };
-		A282E0A32984366100AEEC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A282E0A22984366100AEEC69 /* Assets.xcassets */; };
 		A282E0AB2984382300AEEC69 /* AirQualityMonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A282E0AA2984382300AEEC69 /* AirQualityMonitorApp.swift */; };
 		A28AAFB3298ECA5A004533B5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A28AAFB2298ECA5A004533B5 /* FirebaseAuth */; };
 		A291B450298441F400322E32 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B44F298441F400322E32 /* HeaderView.swift */; };
 		A291B4BF298519D400322E32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4BE298519D400322E32 /* ContentView.swift */; };
 		A29DAB76298FD3310019E2E8 /* Settings in Frameworks */ = {isa = PBXBuildFile; productRef = A29DAB75298FD3310019E2E8 /* Settings */; };
+		A2AF6ACA29EA959A00BE0DEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2AF6AC929EA959A00BE0DEB /* Assets.xcassets */; };
 		A2C1CC5729AB633B007C8773 /* Utilities+Extensions in Frameworks */ = {isa = PBXBuildFile; productRef = A2C1CC5629AB633B007C8773 /* Utilities+Extensions */; };
 		A2F62E1B2997F57F00CA2E53 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F62E1A2997F57E00CA2E53 /* LoadingView.swift */; };
 		A2FB18CC29BDFE25005DCA5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2FB18CB29BDFE25005DCA5E /* GoogleService-Info.plist */; };
@@ -55,8 +54,6 @@
 		A264EACD298FCFEF00CF2CAE /* Dashboard */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Dashboard; sourceTree = "<group>"; };
 		A282E090298435EB00AEEC69 /* AirQualityMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQualityMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A282E099298435EC00AEEC69 /* AirQualityMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AirQualityMonitor.entitlements; sourceTree = "<group>"; };
-		A282E09B298435EC00AEEC69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A282E0A22984366100AEEC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A282E0AA2984382300AEEC69 /* AirQualityMonitorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityMonitorApp.swift; sourceTree = "<group>"; };
 		A282E0B929843D8900AEEC69 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
 		A282E0BD29843E2300AEEC69 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Models; sourceTree = "<group>"; };
@@ -64,6 +61,7 @@
 		A291B44F298441F400322E32 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		A291B4BE298519D400322E32 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A29DAB74298FD2A50019E2E8 /* Settings */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Settings; sourceTree = "<group>"; };
+		A2AF6AC929EA959A00BE0DEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2CF15A529BE061E001123B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A2F62E1A2997F57E00CA2E53 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		A2FB18CB29BDFE25005DCA5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -195,19 +193,10 @@
 				A282E0AA2984382300AEEC69 /* AirQualityMonitorApp.swift */,
 				A291B4BE298519D400322E32 /* ContentView.swift */,
 				A291B44F298441F400322E32 /* HeaderView.swift */,
-				A282E0A22984366100AEEC69 /* Assets.xcassets */,
 				A282E099298435EC00AEEC69 /* AirQualityMonitor.entitlements */,
-				A282E09A298435EC00AEEC69 /* Preview Content */,
+				A2AF6AC929EA959A00BE0DEB /* Assets.xcassets */,
 			);
 			path = AirQualityMonitor;
-			sourceTree = "<group>";
-		};
-		A282E09A298435EC00AEEC69 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				A282E09B298435EC00AEEC69 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		A291B4A1298515DB00322E32 /* Frameworks */ = {
@@ -321,9 +310,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A282E0A32984366100AEEC69 /* Assets.xcassets in Resources */,
+				A2AF6ACA29EA959A00BE0DEB /* Assets.xcassets in Resources */,
 				A2FB18CC29BDFE25005DCA5E /* GoogleService-Info.plist in Resources */,
-				A282E09C298435EC00AEEC69 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,7 +508,7 @@
 				CODE_SIGN_ENTITLEMENTS = AirQualityMonitor/AirQualityMonitor.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"AirQualityMonitor/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = AirQualityMonitor/;
 				DEVELOPMENT_TEAM = 2588CFNS2Y;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -566,7 +554,7 @@
 				CODE_SIGN_ENTITLEMENTS = AirQualityMonitor/AirQualityMonitor.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"AirQualityMonitor/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = AirQualityMonitor/;
 				DEVELOPMENT_TEAM = 2588CFNS2Y;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;

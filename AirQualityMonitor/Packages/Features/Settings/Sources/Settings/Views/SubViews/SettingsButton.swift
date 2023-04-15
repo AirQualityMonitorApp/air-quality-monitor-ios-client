@@ -10,7 +10,7 @@ struct SettingsButton: View {
             action()
         }, label: {
             Text(text)
-                .foregroundColor(.black)
+                .foregroundColor(.fontPrimary)
                 .font(.footnoteH6)
         })
     }

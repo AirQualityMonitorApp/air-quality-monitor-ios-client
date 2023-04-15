@@ -22,7 +22,6 @@ public struct ActionButton: View {
                         .foregroundColor(.white)
                     .font(.headlineH3) }
             )
-            //.disabled(!validation.credentialsValid)
             .frame(width: size.width * 0.25, height: size.height * 0.06)
             .background(Color.green)
             .cornerRadius(10.0)

@@ -13,14 +13,11 @@ struct CircularCardView: View {
     
     var body: some View {
         VStack(alignment: .center) {
-            Button(action: { }) {
                 Text(valueInformation.title)
                     .font(.bodyLightH5)
                     .foregroundColor(.fontPrimary)
                     .frame(width: width, height: parentViewHeight * 0.09)
                     .padding(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
-            }
-            .buttonStyle(PlainButtonStyle())
             
             ZStack(alignment: .center) {
                 Circle()
@@ -34,7 +31,7 @@ struct CircularCardView: View {
                     .animation(.easeInOut(duration: 2))
             }.overlay(
                 VStack {
-                    createStyledText(with: String(displayedData), .fontPrimary, .bodyLightH5)
+                    createStyledText(with: String(displayedData), .fontPrimary, .bodyMediumH5)
                     createStyledText(with: valueInformation.unitMeasure, .fontPrimary, .bodyLightH5)
                 }
             )
