@@ -2,20 +2,17 @@ import Combine
 import Foundation
 import Models
 import Networking
-import SessionManager
 import Settings
 
 @MainActor
 public class DashboardInteractor {
     
     public let viewModel: DashboardView.DashboardViewModel
-    public let sessionManager: SessionManager
     public let settingsViewModel: SettingsView.SettingsViewModel
     
-    public init(viewModel: DashboardView.DashboardViewModel, settingsViewModel: SettingsView.SettingsViewModel, sessionManager: SessionManager) {
+    public init(viewModel: DashboardView.DashboardViewModel, settingsViewModel: SettingsView.SettingsViewModel) {
         self.viewModel = viewModel
         self.settingsViewModel = settingsViewModel
-        self.sessionManager = sessionManager
     }
     
     public var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
@@ -36,17 +33,16 @@ public class DashboardInteractor {
     }
     
     public func updateAirQualityData() async {
-        await sessionManager.checkSessionBeforeUpdating()
         await self.loadAirQualityData()
     }
     
     private func loadAirQualityData() async {
-        await self.fetchAirQualityData(sessionManager: sessionManager)
+        await self.fetchAirQualityData()
     }
     
-    public func fetchAirQualityData(sessionManager: SessionManager) async {
+    public func fetchAirQualityData() async {
         let apiClient = APIClient(baseURL: BaseUrl().url)
-        apiClient.dispatch(FetchData(path: "/api/my", authToken: sessionManager.authToken, method: .get, userId: sessionManager.userID))
+        apiClient.dispatch(FetchData(path: "/api/my", method: .get))
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { _ in
             }, receiveValue: { data in
@@ -56,28 +52,28 @@ public class DashboardInteractor {
     }
 }
 
-@MainActor
-public class DataLoader: ObservableObject {
-    
-    @Published public var airQualityData = [FetchData.ReturnType]()
-    public var cachedHistoryData = [AirQuality]()
-    
-    private let dashboardInteractor: DashboardInteractor
-    
-    public init(dashboardInteractor: DashboardInteractor) {
-        self.dashboardInteractor = dashboardInteractor
-    }
-    
-    private var cancellables = Set<AnyCancellable>()
-    
-    public func fetchAirQualityData(sessionManager: SessionManager) async {
-        let apiClient = APIClient(baseURL: BaseUrl().url)
-        apiClient.dispatch(FetchData(path: "/api/my", authToken: sessionManager.authToken, method: .get, userId: sessionManager.userID))
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in
-            }, receiveValue: { data in
-                self.dashboardInteractor.assignAirQualityData(data: data)
-            })
-            .store(in: &cancellables)
-    }
-}
+//@MainActor
+//public class DataLoader: ObservableObject {
+//
+//    @Published public var airQualityData = [FetchData.ReturnType]()
+//    public var cachedHistoryData = [AirQuality]()
+//
+//    private let dashboardInteractor: DashboardInteractor
+//
+//    public init(dashboardInteractor: DashboardInteractor) {
+//        self.dashboardInteractor = dashboardInteractor
+//    }
+//
+//    private var cancellables = Set<AnyCancellable>()
+//
+//    public func fetchAirQualityData(sessionManager: SessionManager) async {
+//        let apiClient = APIClient(baseURL: BaseUrl().url)
+//        apiClient.dispatch(FetchData(path: "/api/my", authToken: sessionManager.authToken, method: .get, userId: sessionManager.userID))
+//            .receive(on: DispatchQueue.main)
+//            .sink(receiveCompletion: { _ in
+//            }, receiveValue: { data in
+//                self.dashboardInteractor.assignAirQualityData(data: data)
+//            })
+//            .store(in: &cancellables)
+//    }
+//}

@@ -1,6 +1,4 @@
-import Authentication
 import Dashboard
-import SessionManager
 import Settings
 import SwiftUI
 import UIKit
@@ -10,14 +8,12 @@ struct ViewRouter: View {
     @Environment(\.scenePhase) var scenePhase
     
     @ObservedObject var settingsViewModel: SettingsView.SettingsViewModel
-    @ObservedObject var sessionManager: SessionManager
     var dashboardInteractor: DashboardInteractor
     
     let size: CGSize
     
-    init(settingsViewModel: SettingsView.SettingsViewModel, sessionManager: SessionManager, dashboardInteractor: DashboardInteractor, size: CGSize) {
+    init(settingsViewModel: SettingsView.SettingsViewModel, dashboardInteractor: DashboardInteractor, size: CGSize) {
         self.settingsViewModel = settingsViewModel
-        self.sessionManager = sessionManager
         self.dashboardInteractor = dashboardInteractor
         self.size = size
         let appearance = UITabBar.appearance()
@@ -39,7 +35,7 @@ struct ViewRouter: View {
                 }
                 SettingsView(
                     viewModel: settingsViewModel,
-                    sessionManager: sessionManager, size: size
+                    size: size
                 )
                 .tabItem() {
                     Image(systemName: "gearshape.2.fill")

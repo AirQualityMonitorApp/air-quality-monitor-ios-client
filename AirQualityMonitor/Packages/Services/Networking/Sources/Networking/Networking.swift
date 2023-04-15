@@ -47,8 +47,6 @@ extension Request {
             request.httpBody = requestBodyFrom(params: body ?? [:])
 
         }
-        request.addValue((authToken ?? ""), forHTTPHeaderField: "Authorization")
-        request.addValue((userId ?? ""), forHTTPHeaderField: "userId")
         request.addValue(contentType, forHTTPHeaderField: "Content-Type")
         request.addValue(contentType, forHTTPHeaderField: "Accept")
         
