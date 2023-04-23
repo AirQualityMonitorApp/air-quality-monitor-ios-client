@@ -7,21 +7,17 @@ import UIComponents
 
 @main
 struct AirQualityMonitorApp: App {
-    
     init() {
         FontLoader.registerFonts()
         NetworkManager.shared.startMonitoring()
     }
     
-    @StateObject var settingsViewModel = SettingsView.SettingsViewModel()
-    @StateObject var networkManager = NetworkManager()
+    @StateObject var settingsViewModel = SettingsViewModel()
+    @StateObject var dashboardViewModel = DashboardViewModel()
     
     var body: some Scene {
         WindowGroup {
-            ContentView(
-                settingsViewModel: settingsViewModel,
-                dashboardViewModel: DashboardView.DashboardViewModel(settingsViewModel: settingsViewModel)
-            )
+            ContentView(settingsViewModel: settingsViewModel, dashboardViewModel: dashboardViewModel)
         }
     }
 }

@@ -3,18 +3,15 @@ import Foundation
 import Models
 
 public enum HTTPMethod: String {
-    case get     = "GET"
-    case post    = "POST"
-    case delete  = "DELETE"
+    case get = "GET"
 }
 
 public protocol Request {
     var path: String { get }
     var method: HTTPMethod { get }
-    var userId: String? { get }
     var body: [String: Any]? { get }
-    var authToken: String? { get }
-    var headers: [String: String]? { get }
+    var headers: [String : String]? { get }
+    var customHeaders: CustomHeaders? { get }
     associatedtype ReturnType: Codable
 }
 
@@ -23,7 +20,8 @@ extension Request {
     public var contentType: String { return "application/json" }
     var queryParams: [String: String]? { return nil }
     var body: [String: Any]? { return nil }
-    public var headers: [String: String]? { return nil }
+    public var headers: [String : String]? { return nil }
+    var customHeaders: CustomHeaders? { return nil }
 }
 
 extension Request {
@@ -47,6 +45,8 @@ extension Request {
             request.httpBody = requestBodyFrom(params: body ?? [:])
 
         }
+        request.addValue(customHeaders?.headerValue1 ?? "", forHTTPHeaderField: customHeaders?.customHeader1 ?? "")
+        request.addValue(customHeaders?.headerValue2 ?? "", forHTTPHeaderField: customHeaders?.customHeader2 ?? "")
         request.addValue(contentType, forHTTPHeaderField: "Content-Type")
         request.addValue(contentType, forHTTPHeaderField: "Accept")
         
@@ -153,15 +153,28 @@ public struct FetchData: Request {
     public var body: [String : Any]?
     public typealias ReturnType = AirQuality
     public var path: String
-    public var authToken: String?
     public var method: HTTPMethod
-    public var userId: String?
+    public var customHeaders: CustomHeaders?
     
-    public init(body: [String : Any]? = nil, path: String, authToken: String? = nil, method: HTTPMethod, userId: String? = nil) {
+    
+    public init(body: [String : Any]? = nil, path: String, method: HTTPMethod, customHeaders: CustomHeaders? = nil) {
         self.body = body
         self.path = path
-        self.authToken = authToken
         self.method = method
-        self.userId = userId
+        self.customHeaders = customHeaders
     }
+}
+
+public struct CustomHeaders: Hashable {
+    public init(customHeader1: String? = nil, customHeader2: String? = nil, headerValue1: String? = nil, headerValue2: String? = nil) {
+        self.customHeader1 = customHeader1
+        self.customHeader2 = customHeader2
+        self.headerValue1 = headerValue1
+        self.headerValue2 = headerValue2
+    }
+    
+    let customHeader1: String?
+    let customHeader2: String?
+    let headerValue1: String?
+    let headerValue2: String?
 }

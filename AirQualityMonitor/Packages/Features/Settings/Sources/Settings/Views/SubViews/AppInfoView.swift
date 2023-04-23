@@ -4,7 +4,8 @@ struct AppInfoView: View {
     
     var body: some View {
         Section(header: Text("About this app")
-            .font(.bodyH4)) {
+            .font(.bodyH4)
+            .foregroundColor(.fontPrimary)) {
             HStack {
                 Text("Version:")
                     .font(.footnoteH6)

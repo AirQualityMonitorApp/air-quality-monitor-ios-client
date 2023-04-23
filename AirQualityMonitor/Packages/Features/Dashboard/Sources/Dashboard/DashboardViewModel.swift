@@ -1,53 +1,46 @@
 import Foundation
-import Settings
+import Networking
 import SwiftUI
+import Settings
 
-public extension DashboardView {
-    @MainActor class DashboardViewModel: ObservableObject, DashboardViewModelProtocol {
-        
-        @Published public var co2: Double = 0
-        @Published public var temp: Double = 0
-        @Published public var humidity: Double = 0
-        @Published public var voc: Double = 0
-        @Published public var pm: Double = 0
-        @Published public var aqiScore: Int = 0
-        
-        @Published public var tempColor: Color = .white
-        @Published public var humidityColor: Color = .white
-        @Published public var co2Color: Color = .white
-        @Published public var vocColor: Color = .white
-        @Published public var pmColor: Color = .white
-        @Published public var aqiValueColor: Color = .white
-        
-        public var celsiusFahrenheitTemp: Double {
-            get {
-                if settingsViewModel.isFahrenheit {
-                    return ((9/5 * self.temp) + 32).truncate(positions: 2)
-                }
-                return self.temp
-            }
-        }
-        
-        public let settingsViewModel: SettingsView.SettingsViewModel
-        
-        public init(settingsViewModel: SettingsView.SettingsViewModel) {
-            self.settingsViewModel = settingsViewModel
-        }
-    }
-}
-
-@MainActor
-protocol DashboardViewModelProtocol {
-    var co2: Double { get set }
-    var temp: Double { get set }
-    var humidity: Double { get set }
-    var voc: Double { get set }
-    var pm: Double { get set }
-    var aqiScore: Int { get set }
+public final class DashboardViewModel: ObservableObject {
+    
+    public init() {}
+    
+    @Published var dataItems: [DataItem] = []
+    @Published var aqiScore: AirQualityScoreItem = AirQualityScoreItem(value: 0, color: .white, isSelected: true)
 }
 
 extension Double {
     func truncate(positions : Int)-> Double {
         return Double(floor(pow(10.0, Double(positions)) * self)/pow(10.0, Double(positions)))
     }
+}
+
+enum ValueType {
+    case co2
+    case temperature
+    case humidity
+    case voc
+    case pm25
+    case aqi
+}
+
+struct DataItem: Equatable, Identifiable {
+    static func == (lhs: DataItem, rhs: DataItem) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    let id = UUID()
+    let value: Double
+    let color: Color
+    let info: ValueInformation
+    var isSelected: Bool
+}
+
+struct AirQualityScoreItem: Equatable, Identifiable {
+    let id = UUID()
+    let value: Int
+    let color: Color
+    var isSelected: Bool
 }

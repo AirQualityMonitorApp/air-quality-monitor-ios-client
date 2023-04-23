@@ -6,14 +6,14 @@ import UIKit
 struct ViewRouter: View {
     
     @Environment(\.scenePhase) var scenePhase
-    
-    @ObservedObject var settingsViewModel: SettingsView.SettingsViewModel
-    var dashboardInteractor: DashboardInteractor
-    
+    @ObservedObject var settingsViewModel: SettingsViewModel
+    @ObservedObject var dashboardViewModel: DashboardViewModel
+    let dashboardInteractor: DashboardInteractor
     let size: CGSize
     
-    init(settingsViewModel: SettingsView.SettingsViewModel, dashboardInteractor: DashboardInteractor, size: CGSize) {
+    init(settingsViewModel: SettingsViewModel, dashboardViewModel: DashboardViewModel, dashboardInteractor: DashboardInteractor, size: CGSize) {
         self.settingsViewModel = settingsViewModel
+        self.dashboardViewModel = dashboardViewModel
         self.dashboardInteractor = dashboardInteractor
         self.size = size
         let appearance = UITabBar.appearance()
@@ -41,7 +41,8 @@ struct ViewRouter: View {
                     Image(systemName: "gearshape.2.fill")
                     Text("Settings")
                 }
-            }.accentColor(.green)
+            }
+            .accentColor(.green)
         }
         .onAppear {
             Task {

@@ -7,17 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A20D646029EAAB8A004975FF /* Dashboard in Frameworks */ = {isa = PBXBuildFile; productRef = A20D645F29EAAB8A004975FF /* Dashboard */; };
-		A20D646429EAAB91004975FF /* Settings in Frameworks */ = {isa = PBXBuildFile; productRef = A20D646329EAAB91004975FF /* Settings */; };
-		A20D646629EAAB94004975FF /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = A20D646529EAAB94004975FF /* UIComponents */; };
 		A2380BDC2997EEAC00994453 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2380BDB2997EEAC00994453 /* ViewRouter.swift */; };
-		A255D98C29C745F700AE0A88 /* AirQualityMonitorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A255D98B29C745F700AE0A88 /* AirQualityMonitorUITests.swift */; };
-		A255D98E29C745F700AE0A88 /* AirQualityMonitorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A255D98D29C745F700AE0A88 /* AirQualityMonitorUITestsLaunchTests.swift */; };
+		A2529F9629EAB28400E7DC8F /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = A2529F9529EAB28400E7DC8F /* Models */; };
+		A2529F9829EAB28400E7DC8F /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = A2529F9729EAB28400E7DC8F /* Networking */; };
+		A2529F9C29EAB28400E7DC8F /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = A2529F9B29EAB28400E7DC8F /* UIComponents */; };
+		A2529F9E29EAB28400E7DC8F /* Utilities+Extensions in Frameworks */ = {isa = PBXBuildFile; productRef = A2529F9D29EAB28400E7DC8F /* Utilities+Extensions */; };
 		A255D99529C7463B00AE0A88 /* AQMUITestsDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A255D99429C7463B00AE0A88 /* AQMUITestsDashboard.swift */; };
-		A26601AA29EAADA90001C2D6 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = A26601A929EAADA90001C2D6 /* Models */; };
-		A26601AC29EAADDC0001C2D6 /* SessionManager in Frameworks */ = {isa = PBXBuildFile; productRef = A26601AB29EAADDC0001C2D6 /* SessionManager */; };
-		A26601AE29EAAE250001C2D6 /* Utilities+Extensions in Frameworks */ = {isa = PBXBuildFile; productRef = A26601AD29EAAE250001C2D6 /* Utilities+Extensions */; };
 		A282E0AB2984382300AEEC69 /* AirQualityMonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A282E0AA2984382300AEEC69 /* AirQualityMonitorApp.swift */; };
+		A287000629F45769009D77F1 /* Settings in Frameworks */ = {isa = PBXBuildFile; productRef = A287000529F45769009D77F1 /* Settings */; };
+		A287000829F4577C009D77F1 /* Dashboard in Frameworks */ = {isa = PBXBuildFile; productRef = A287000729F4577C009D77F1 /* Dashboard */; };
 		A291B450298441F400322E32 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B44F298441F400322E32 /* HeaderView.swift */; };
 		A291B4BF298519D400322E32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4BE298519D400322E32 /* ContentView.swift */; };
 		A2AF6ACA29EA959A00BE0DEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2AF6AC929EA959A00BE0DEB /* Assets.xcassets */; };
@@ -36,13 +34,9 @@
 
 /* Begin PBXFileReference section */
 		A218B005298DB9AF00033260 /* AirQualityMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityMonitorTests.swift; sourceTree = "<group>"; };
-		A218B00C298DBA0800033260 /* UserSettingsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsInteractorTests.swift; sourceTree = "<group>"; };
-		A22494E4298FC48200EF5F64 /* SessionManager */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SessionManager; sourceTree = "<group>"; };
 		A22AB8A3298ECC8700E611C5 /* Utilities+Extensions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "Utilities+Extensions"; sourceTree = "<group>"; };
 		A2380BDB2997EEAC00994453 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		A255D98929C745F600AE0A88 /* AirQualityMonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirQualityMonitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A255D98B29C745F700AE0A88 /* AirQualityMonitorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityMonitorUITests.swift; sourceTree = "<group>"; };
-		A255D98D29C745F700AE0A88 /* AirQualityMonitorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityMonitorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A255D99429C7463B00AE0A88 /* AQMUITestsDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMUITestsDashboard.swift; sourceTree = "<group>"; };
 		A255D99629C7476900AE0A88 /* AirQualityMonitor.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = AirQualityMonitor.xctestplan; sourceTree = "<group>"; };
 		A264EACD298FCFEF00CF2CAE /* Dashboard */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Dashboard; sourceTree = "<group>"; };
@@ -72,12 +66,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A26601AA29EAADA90001C2D6 /* Models in Frameworks */,
-				A20D646029EAAB8A004975FF /* Dashboard in Frameworks */,
-				A26601AC29EAADDC0001C2D6 /* SessionManager in Frameworks */,
-				A26601AE29EAAE250001C2D6 /* Utilities+Extensions in Frameworks */,
-				A20D646629EAAB94004975FF /* UIComponents in Frameworks */,
-				A20D646429EAAB91004975FF /* Settings in Frameworks */,
+				A2529F9829EAB28400E7DC8F /* Networking in Frameworks */,
+				A2529F9629EAB28400E7DC8F /* Models in Frameworks */,
+				A2529F9E29EAB28400E7DC8F /* Utilities+Extensions in Frameworks */,
+				A287000629F45769009D77F1 /* Settings in Frameworks */,
+				A2529F9C29EAB28400E7DC8F /* UIComponents in Frameworks */,
+				A287000829F4577C009D77F1 /* Dashboard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				A218B005298DB9AF00033260 /* AirQualityMonitorTests.swift */,
-				A218B00C298DBA0800033260 /* UserSettingsInteractorTests.swift */,
 			);
 			path = AirQualityMonitorTests;
 			sourceTree = "<group>";
@@ -108,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				A282E0B929843D8900AEEC69 /* Networking */,
-				A22494E4298FC48200EF5F64 /* SessionManager */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -125,8 +117,6 @@
 		A255D98A29C745F600AE0A88 /* AirQualityMonitorUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A255D98B29C745F700AE0A88 /* AirQualityMonitorUITests.swift */,
-				A255D98D29C745F700AE0A88 /* AirQualityMonitorUITestsLaunchTests.swift */,
 				A255D99429C7463B00AE0A88 /* AQMUITestsDashboard.swift */,
 				A255D99629C7476900AE0A88 /* AirQualityMonitor.xctestplan */,
 			);
@@ -228,12 +218,12 @@
 			);
 			name = AirQualityMonitor;
 			packageProductDependencies = (
-				A20D645F29EAAB8A004975FF /* Dashboard */,
-				A20D646329EAAB91004975FF /* Settings */,
-				A20D646529EAAB94004975FF /* UIComponents */,
-				A26601A929EAADA90001C2D6 /* Models */,
-				A26601AB29EAADDC0001C2D6 /* SessionManager */,
-				A26601AD29EAAE250001C2D6 /* Utilities+Extensions */,
+				A2529F9529EAB28400E7DC8F /* Models */,
+				A2529F9729EAB28400E7DC8F /* Networking */,
+				A2529F9B29EAB28400E7DC8F /* UIComponents */,
+				A2529F9D29EAB28400E7DC8F /* Utilities+Extensions */,
+				A287000529F45769009D77F1 /* Settings */,
+				A287000729F4577C009D77F1 /* Dashboard */,
 			);
 			productName = "Air-quality-monitor";
 			productReference = A282E090298435EB00AEEC69 /* AirQualityMonitor.app */;
@@ -268,8 +258,6 @@
 			);
 			mainGroup = A282E087298435EB00AEEC69;
 			packageReferences = (
-				A282E0AC29843D6800AEEC69 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				A2460ECF2992FB9300D8F8AF /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = A282E091298435EB00AEEC69 /* Products */;
 			projectDirPath = "";
@@ -304,9 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A255D98E29C745F700AE0A88 /* AirQualityMonitorUITestsLaunchTests.swift in Sources */,
 				A255D99529C7463B00AE0A88 /* AQMUITestsDashboard.swift in Sources */,
-				A255D98C29C745F700AE0A88 /* AirQualityMonitorUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,49 +591,30 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		A2460ECF2992FB9300D8F8AF /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		A282E0AC29843D6800AEEC69 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		A20D645F29EAAB8A004975FF /* Dashboard */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Dashboard;
-		};
-		A20D646329EAAB91004975FF /* Settings */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Settings;
-		};
-		A20D646529EAAB94004975FF /* UIComponents */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = UIComponents;
-		};
-		A26601A929EAADA90001C2D6 /* Models */ = {
+		A2529F9529EAB28400E7DC8F /* Models */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Models;
 		};
-		A26601AB29EAADDC0001C2D6 /* SessionManager */ = {
+		A2529F9729EAB28400E7DC8F /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = SessionManager;
+			productName = Networking;
 		};
-		A26601AD29EAAE250001C2D6 /* Utilities+Extensions */ = {
+		A2529F9B29EAB28400E7DC8F /* UIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIComponents;
+		};
+		A2529F9D29EAB28400E7DC8F /* Utilities+Extensions */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = "Utilities+Extensions";
+		};
+		A287000529F45769009D77F1 /* Settings */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Settings;
+		};
+		A287000729F4577C009D77F1 /* Dashboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Dashboard;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

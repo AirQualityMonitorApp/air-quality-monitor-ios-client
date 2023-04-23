@@ -2,34 +2,39 @@ import SwiftUI
 
 struct DashboardSettingsView: View {
     
-    @ObservedObject var viewModel: SettingsView.SettingsViewModel
+    @ObservedObject var viewModel: SettingsViewModel
     var body: some View {
         Section(header: Text("Dashboard Settings")
             .foregroundColor(.fontPrimary)
             .font(.bodyH4)) {
-            HStack {
-                Toggle("Fahrenheit", isOn: $viewModel.isFahrenheit)
-                    .font(.footnoteH6)
-                    .foregroundColor(.fontPrimary)
+                DashboardSettingsCell(title: "Fahrenheit", isOn: $viewModel.isFahrenheit)
+                DashboardSettingsCell(title: "Air Quality Score", isOn: $viewModel.aqiScoreIsSelected)
+                DashboardSettingsCell(title: "CO²", isOn: $viewModel.co2IsSelected)
+                DashboardSettingsCell(title: "VOC", isOn: $viewModel.vocIsSelected)
+                DashboardSettingsCell(title: "PM2.5", isOn: $viewModel.pm25IsSelected)
+                DashboardSettingsCell(title: "Temperature", isOn: $viewModel.temperatureIsSelected)
+                DashboardSettingsCell(title: "Humidity", isOn: $viewModel.humidityIsSelected)
             }
-            HStack {
-                Toggle("Hide weather values", isOn: $viewModel.weatherValuesAreHidden)
-                    .font(.footnoteH6)
-                    .foregroundColor(.fontPrimary)
-            }
-            HStack {
-                Toggle("Hide VOC, CO² and PM2.5", isOn: $viewModel.gasPmValuesAreHidden)
-                    .font(.footnoteH6)
-                    .foregroundColor(.fontPrimary)
-            }
+    }
+}
+
+struct DashboardSettingsCell: View {
+    let title: String
+    let isOn: Binding<Bool>
+    var body: some View {
+        HStack {
+            Toggle(title, isOn: isOn)
+                .font(.footnoteH6)
+                .foregroundColor(.fontPrimary)
         }
     }
 }
 
+
 #if DEBUG
 struct DashboardSettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardSettingsView(viewModel: SettingsView.SettingsViewModel())
+        DashboardSettingsView(viewModel: SettingsViewModel())
     }
 }
 #endif

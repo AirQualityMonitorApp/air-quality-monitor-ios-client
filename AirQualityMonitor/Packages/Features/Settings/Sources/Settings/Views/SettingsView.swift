@@ -3,10 +3,10 @@ import UIComponents
 
 public struct SettingsView: View {
     
-    @ObservedObject var viewModel: SettingsView.SettingsViewModel
+    @ObservedObject var viewModel: SettingsViewModel
     let size: CGSize
     
-    public init(viewModel: SettingsView.SettingsViewModel, size: CGSize) {
+    public init(viewModel: SettingsViewModel, size: CGSize) {
         self.viewModel = viewModel
         self.size = size
     }
@@ -16,6 +16,7 @@ public struct SettingsView: View {
             VStack{
                 List {
                     DashboardSettingsView(viewModel: viewModel)
+                    ServerConfiguration(viewModel: viewModel, size: size)
                     AppInfoView()
                 }
                 .font(.bodyH4)
@@ -25,8 +26,8 @@ public struct SettingsView: View {
     }
 }
 
-private struct SettingsListStyle: ViewModifier {
-    func body(content: Content) -> some View {
+public struct SettingsListStyle: ViewModifier {
+    public func body(content: Content) -> some View {
         if UIDevice.current.userInterfaceIdiom == .pad {
             content
                 .listStyle(PlainListStyle())

@@ -11,11 +11,13 @@ let package = Package(
             targets: ["Settings"]),
     ],
     dependencies: [
+        .package(path: "UIComponents")
     ],
     targets: [
         .target(
             name: "Settings",
             dependencies: [
+                "UIComponents"
             ]),
         .testTarget(
             name: "SettingsTests",

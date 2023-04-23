@@ -6,8 +6,8 @@ import UIComponents
 
 struct ContentView: View {
     
-    @ObservedObject var settingsViewModel: SettingsView.SettingsViewModel
-    @StateObject var dashboardViewModel: DashboardView.DashboardViewModel
+    @ObservedObject var settingsViewModel: SettingsViewModel
+    @ObservedObject var dashboardViewModel: DashboardViewModel
     
     @State var isErrorPresented = NetworkManager.shared.networkState == .notConnected ? true : false
     
@@ -17,7 +17,8 @@ struct ContentView: View {
             VStack {
                 ViewRouter(
                     settingsViewModel: settingsViewModel,
-                    dashboardInteractor: DashboardInteractor(viewModel: dashboardViewModel, settingsViewModel: settingsViewModel),
+                    dashboardViewModel: dashboardViewModel,
+                    dashboardInteractor: DashboardInteractor(dashboardViewModel: dashboardViewModel, settingsViewModel: settingsViewModel),
                     size: geometry.size
                 )
             }
@@ -28,11 +29,11 @@ struct ContentView: View {
         .edgesIgnoringSafeArea(.all)
     }
 }
-
-#if DEBUG
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(settingsViewModel: SettingsView.SettingsViewModel(), dashboardViewModel: DashboardView.DashboardViewModel(settingsViewModel: SettingsView.SettingsViewModel()))
-    }
-}
-#endif
+//
+//#if DEBUG
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView(dashboardViewModel: DashboardView.DashboardViewModel(settingsViewModel: SettingsView.SettingsViewModel()))
+//    }
+//}
+//#endif

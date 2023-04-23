@@ -11,12 +11,14 @@ let package = Package(
             targets: ["Dashboard"]),
     ],
     dependencies: [
+        .package(path: "Networking"),
         .package(path: "Settings")
     ],
     targets: [
         .target(
             name: "Dashboard",
             dependencies: [
+                "Networking",
                 "Settings"
             ]),
         .testTarget(

@@ -3,13 +3,12 @@ import SwiftUI
 import UIComponents
 
 struct CircularCardView: View {
-    
+
     let displayedData: Double
     let parentViewHeight: CGFloat
     let width: CGFloat
     let color: Color
-    
-    var valueInformation: ValueInformation
+    let valueInformation: ValueInformation
     
     var body: some View {
         VStack(alignment: .center) {
