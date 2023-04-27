@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Co2Level: PmGasLevels {
+public struct Co2Level: PMGasLevels {
     public let good: ClosedRange<Double> = 0.01...600
     public let fair: ClosedRange<Double> = 601.0...1000
     public let moderate: ClosedRange<Double> = 1001.0...1500

@@ -31,16 +31,20 @@ public class DashboardInteractor {
         DispatchQueue.main.async { [self] in
             data.forEach { data in
                 dashboardViewModel.dataItems = [
-                    DataItem(value: data.co2 ?? defaultValue, color: updateCardColor(value: data.co2 ?? defaultValue, valueType: .co2), info: Co2ValueInformation(), isSelected: settingsViewModel.co2IsSelected),
-                    DataItem(value: data.pm ?? defaultValue, color: updateCardColor(value: data.temperature ?? defaultValue, valueType: .pm25), info: PMValueInformation(), isSelected: settingsViewModel.pm25IsSelected),
-                    DataItem(value: data.tvoc ?? defaultValue, color: updateCardColor(value: data.tvoc ?? defaultValue, valueType: .voc), info: VocValueInformation(), isSelected: settingsViewModel.vocIsSelected),
-                    DataItem(value: data.temperature ?? defaultValue, color: updateCardColor(value: data.temperature ?? defaultValue, valueType: .temperature), info: TempCelsiusValueInformation(), isSelected: settingsViewModel.temperatureIsSelected),
-                    DataItem(value: data.humidity ?? defaultValue, color: updateCardColor(value: data.humidity ?? defaultValue, valueType: .humidity), info: HumidityValueInformation(), isSelected: settingsViewModel.humidityIsSelected)
-                    
+                    makeDataItem(with: data.co2, valueType: .co2, isSelected: settingsViewModel.co2IsSelected, info: Co2ValueInformation()),
+                    makeDataItem(with: data.pm25, valueType: .pm25, isSelected: settingsViewModel.pm25IsSelected, info: PM25ValueInformation()),
+                    makeDataItem(with: data.pm10, valueType: .pm10, isSelected: settingsViewModel.pm10IsSelected, info: PM10ValueInformation()),
+                    makeDataItem(with: data.vocIndex, valueType: .voc, isSelected: settingsViewModel.vocIndexIsSelected, info: VocValueInformation()),
+                    makeDataItem(with: settingsViewModel.isFahrenheit ? data.temperature?.toFahrenheit() : data.temperature, valueType: settingsViewModel.isFahrenheit ? .tempFahrenheit : .tempCelsius, isSelected: settingsViewModel.temperatureIsSelected, info: settingsViewModel.isFahrenheit ? TempFahrenheitValueInformation() : TempCelsiusValueInformation()),
+                    makeDataItem(with: data.humidity, valueType: .humidity, isSelected: settingsViewModel.humidityIsSelected, info: HumidityValueInformation())
                 ]
-                dashboardViewModel.aqiScore = AirQualityScoreItem(value: data.AQScore ?? 0, color: updateAQIValueColor(value: data.AQScore ?? 0), isSelected: settingsViewModel.aqiScoreIsSelected)
+                dashboardViewModel.aqiScore = AirQualityScoreItem(value: data.aqScore ?? 0, color: updateAQIValueColor(value: data.aqScore ?? 0), isSelected: settingsViewModel.aqiScoreIsSelected)
             }
         }
+    }
+    
+    func makeDataItem(with value: Double?, valueType: ValueType, isSelected: Bool, info: ValueInformation) -> DataItem {
+        return DataItem(value: value ?? defaultValue, color: updateCardColor(value: value ?? defaultValue, valueType: valueType), info: info, isSelected: isSelected)
     }
 
     public func updateAirQualityData() async {
@@ -90,7 +94,7 @@ extension DashboardInteractor {
         }
     }
     
-    private func setGasPmCardColor(value: Double, level: PmGasLevels) -> Color {
+    private func setGasPmCardColor(value: Double, level: PMGasLevels) -> Color {
         switch value {
         case level.good:
             return .green
@@ -112,11 +116,15 @@ extension DashboardInteractor {
         case .co2:
             return setGasPmCardColor(value: value, level: Co2Level())
         case .pm25:
-            return setGasPmCardColor(value: value, level: PmLevel())
+            return setGasPmCardColor(value: value, level: PM25Level())
+        case .pm10:
+            return setGasPmCardColor(value: value, level: PM10Level())
         case .voc:
             return setGasPmCardColor(value: value, level: VocLevel())
-        case .temperature:
-            return setTempHumidityCardColor(value: value, level: TemperatureLevel())
+        case .tempCelsius:
+            return setTempHumidityCardColor(value: value, level: TemperatureCelsiusLevel())
+        case .tempFahrenheit:
+            return setTempHumidityCardColor(value: value, level: TemperatureFahrenheitLevel())
         case .humidity:
             return setTempHumidityCardColor(value: value, level: HumidityLevel())
         }
@@ -145,7 +153,15 @@ extension DashboardInteractor {
         case co2
         case voc
         case pm25
-        case temperature
+        case pm10
+        case tempCelsius
+        case tempFahrenheit
         case humidity
+    }
+}
+
+private extension Double {
+    func toFahrenheit() -> Double {
+        return self * 1.8 + 32.0
     }
 }

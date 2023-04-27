@@ -16,7 +16,9 @@ public class SettingsViewModel: ObservableObject {
     @AppStorage("requestInterval") public var requestInterval: String = ""
     @AppStorage("co2IsSelected") public var co2IsSelected: Bool = false
     @AppStorage("vocIsSelected") public var vocIsSelected: Bool = false
+    @AppStorage("vocIndexIsSelected") public var vocIndexIsSelected: Bool = false
     @AppStorage("pm25IsSelected") public var pm25IsSelected: Bool = false
+    @AppStorage("pm10IsSelected") public var pm10IsSelected: Bool = false
     @AppStorage("humidityIsSelected") public var humidityIsSelected: Bool = false
     @AppStorage("temperatureIsSelected") public var temperatureIsSelected: Bool = false
     @AppStorage("aqiScoreIsSelected") public var aqiScoreIsSelected: Bool = false

@@ -1,6 +1,6 @@
 import Foundation
 
-public struct VocLevel: PmGasLevels {
+public struct VocLevel: PMGasLevels {
     public let good: ClosedRange<Double> = 0.01...100.0
     public let fair: ClosedRange<Double> = 100.1...200.0
     public let moderate: ClosedRange<Double> = 200.1...300.0

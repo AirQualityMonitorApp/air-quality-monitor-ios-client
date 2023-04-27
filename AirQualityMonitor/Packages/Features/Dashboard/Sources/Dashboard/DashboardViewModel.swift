@@ -11,12 +11,6 @@ public final class DashboardViewModel: ObservableObject {
     @Published var aqiScore: AirQualityScoreItem = AirQualityScoreItem(value: 0, color: .white, isSelected: true)
 }
 
-extension Double {
-    func truncate(positions : Int)-> Double {
-        return Double(floor(pow(10.0, Double(positions)) * self)/pow(10.0, Double(positions)))
-    }
-}
-
 enum ValueType {
     case co2
     case temperature

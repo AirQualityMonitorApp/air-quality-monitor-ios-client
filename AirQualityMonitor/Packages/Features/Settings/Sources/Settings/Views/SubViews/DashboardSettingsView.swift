@@ -10,8 +10,9 @@ struct DashboardSettingsView: View {
                 DashboardSettingsCell(title: "Fahrenheit", isOn: $viewModel.isFahrenheit)
                 DashboardSettingsCell(title: "Air Quality Score", isOn: $viewModel.aqiScoreIsSelected)
                 DashboardSettingsCell(title: "CO²", isOn: $viewModel.co2IsSelected)
-                DashboardSettingsCell(title: "VOC", isOn: $viewModel.vocIsSelected)
+                DashboardSettingsCell(title: "VOC Index", isOn: $viewModel.vocIndexIsSelected)
                 DashboardSettingsCell(title: "PM2.5", isOn: $viewModel.pm25IsSelected)
+                DashboardSettingsCell(title: "PM10", isOn: $viewModel.pm10IsSelected)
                 DashboardSettingsCell(title: "Temperature", isOn: $viewModel.temperatureIsSelected)
                 DashboardSettingsCell(title: "Humidity", isOn: $viewModel.humidityIsSelected)
             }

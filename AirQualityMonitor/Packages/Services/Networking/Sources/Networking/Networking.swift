@@ -35,7 +35,6 @@ extension Request {
     }
     
     func asURLRequest(baseURL: String) -> URLRequest? {
-        
         guard var urlComponents = URLComponents(string: baseURL) else { return nil }
         urlComponents.path = "\(urlComponents.path)\(path)"
         guard let finalURL = urlComponents.url else { return nil }

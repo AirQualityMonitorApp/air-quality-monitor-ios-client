@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol PmGasLevels {
+public protocol PMGasLevels {
     var good: ClosedRange<Double> { get }
     var fair: ClosedRange<Double> { get }
     var moderate: ClosedRange<Double> { get }

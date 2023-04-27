@@ -20,11 +20,18 @@ public struct VocValueInformation: ValueInformation {
     public let limit: Double = 500.0
 }
 
-public struct PMValueInformation: ValueInformation {
+public struct PM25ValueInformation: ValueInformation {
     
     public let title: String = "PM2.5"
     public let unitMeasure: String = "µg/m³"
     public let limit: Double = 75.1
+}
+
+public struct PM10ValueInformation: ValueInformation {
+    
+    public let title: String = "PM10"
+    public let unitMeasure: String = "µg/m³"
+    public let limit: Double = 300.0
 }
 
 public struct TempCelsiusValueInformation: ValueInformation {
@@ -39,7 +46,6 @@ public struct TempFahrenheitValueInformation: ValueInformation {
     public let title: String = "Temperature"
     public let unitMeasure: String = "°F"
     public let limit: Double = 149.0
-
 }
 
 public struct HumidityValueInformation: ValueInformation {
