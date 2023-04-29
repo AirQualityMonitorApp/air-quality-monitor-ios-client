@@ -31,6 +31,7 @@ public extension Font {
         custom(font.rawValue, size: style.size, relativeTo: style)
     }
     
+    static let largeTitleH0 = custom(.bold, relativeTo: .largeTitle)
     static let largeTitleH1 = custom(.bold, relativeTo: .largeTitle)
     static let titleH2 = custom(.semiBold, relativeTo: .title)
     static let headlineH3 = custom(.medium, relativeTo: .headline)

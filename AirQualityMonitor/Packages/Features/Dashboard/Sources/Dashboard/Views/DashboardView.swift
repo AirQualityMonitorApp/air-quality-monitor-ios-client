@@ -17,7 +17,7 @@ public struct DashboardView: View {
     public var body: some View {
         VStack(alignment: .center) {
             AQIView(viewModel: interactor.dashboardViewModel, interactor: interactor, aqiViewHeight: dashboardViewHeight * 0.35, width: width)
-            GasPmValuesView(valueViewHeight: dashboardViewHeight * 0.235, width: width, viewModel: interactor.dashboardViewModel)
+            ValuesView(valueViewHeight: dashboardViewHeight * 0.235, width: width, viewModel: interactor.dashboardViewModel)
         }
         .frame(width: width, height: dashboardViewHeight, alignment: .top)
         .padding(EdgeInsets(top: 12, leading: 0, bottom: 4, trailing: 0))

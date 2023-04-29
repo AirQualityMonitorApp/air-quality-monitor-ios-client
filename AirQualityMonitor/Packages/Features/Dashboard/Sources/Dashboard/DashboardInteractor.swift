@@ -16,7 +16,7 @@ public class DashboardInteractor {
         self.settingsViewModel = settingsViewModel
     }
     
-    private func makeCustomHeaders() -> CustomHeaders {
+    private func setCustomHeaders() -> CustomHeaders {
         return CustomHeaders(customHeader1: settingsViewModel.headerField1, customHeader2: settingsViewModel.headerField2, headerValue1: settingsViewModel.headerFieldValue1, headerValue2: settingsViewModel.headerFieldValue2)
     }
     
@@ -35,7 +35,8 @@ public class DashboardInteractor {
                     makeDataItem(with: data.pm25, valueType: .pm25, isSelected: settingsViewModel.pm25IsSelected, info: PM25ValueInformation()),
                     makeDataItem(with: data.pm10, valueType: .pm10, isSelected: settingsViewModel.pm10IsSelected, info: PM10ValueInformation()),
                     makeDataItem(with: data.vocIndex, valueType: .voc, isSelected: settingsViewModel.vocIndexIsSelected, info: VocValueInformation()),
-                    makeDataItem(with: settingsViewModel.isFahrenheit ? data.temperature?.toFahrenheit() : data.temperature, valueType: settingsViewModel.isFahrenheit ? .tempFahrenheit : .tempCelsius, isSelected: settingsViewModel.temperatureIsSelected, info: settingsViewModel.isFahrenheit ? TempFahrenheitValueInformation() : TempCelsiusValueInformation()),
+                    makeDataItem(with: data.tvoc, valueType: .tvoc, isSelected: settingsViewModel.tvocIsSelected, info: TvocValueInformation()),
+                    makeDataItem(with: settingsViewModel.isFahrenheit ? data.tempCelsius?.toFahrenheit() : data.tempCelsius, valueType: settingsViewModel.isFahrenheit ? .tempFahrenheit : .tempCelsius, isSelected: settingsViewModel.temperatureIsSelected, info: settingsViewModel.isFahrenheit ? TempFahrenheitValueInformation() : TempCelsiusValueInformation()),
                     makeDataItem(with: data.humidity, valueType: .humidity, isSelected: settingsViewModel.humidityIsSelected, info: HumidityValueInformation())
                 ]
                 dashboardViewModel.aqiScore = AirQualityScoreItem(value: data.aqScore ?? 0, color: updateAQIValueColor(value: data.aqScore ?? 0), isSelected: settingsViewModel.aqiScoreIsSelected)
@@ -57,7 +58,7 @@ public class DashboardInteractor {
     
     public func fetchAirQualityData() async {
         let apiClient = APIClient(baseURL: settingsViewModel.baseUrl)
-        let fetchData = FetchData(path: settingsViewModel.urlPath, method: .get, customHeaders: self.makeCustomHeaders())
+        let fetchData = FetchData(path: settingsViewModel.urlPath, method: .get, customHeaders: self.setCustomHeaders())
         apiClient.dispatch(fetchData)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { _ in
@@ -121,6 +122,8 @@ extension DashboardInteractor {
             return setGasPmCardColor(value: value, level: PM10Level())
         case .voc:
             return setGasPmCardColor(value: value, level: VocLevel())
+        case .tvoc:
+            return setGasPmCardColor(value: value, level: TvocLevel())
         case .tempCelsius:
             return setTempHumidityCardColor(value: value, level: TemperatureCelsiusLevel())
         case .tempFahrenheit:
@@ -152,6 +155,7 @@ extension DashboardInteractor {
     public enum ValueType {
         case co2
         case voc
+        case tvoc
         case pm25
         case pm10
         case tempCelsius
@@ -160,8 +164,9 @@ extension DashboardInteractor {
     }
 }
 
-private extension Double {
+extension Double {
     func toFahrenheit() -> Double {
-        return self * 1.8 + 32.0
+        let fahrenheit = (self * 1.8) + 32
+        return Double(String(format: "%.1f", fahrenheit)) ?? 0.0
     }
 }

@@ -24,7 +24,7 @@ struct AQIView: View {
             }.overlay(
                 Text(String(viewModel.aqiScore.value)))
             .foregroundColor(viewModel.aqiScore.color)
-                .font(.largeTitleH1)
+            .font(.largeTitleH1)
                 .animation(.easeInOut(duration: 1))
         }
         .isHidden(!viewModel.aqiScore.isSelected)
