@@ -7,14 +7,14 @@ struct DashboardSettingsView: View {
         Section(header: Text("Dashboard Settings")
             .foregroundColor(.fontPrimary)
             .font(.bodyH4)) {
-                DashboardSettingsCell(title: "Fahrenheit", isOn: $viewModel.isFahrenheit)
                 DashboardSettingsCell(title: "Air Quality Score", isOn: $viewModel.aqiScoreIsSelected)
                 DashboardSettingsCell(title: "CO²", isOn: $viewModel.co2IsSelected)
                 DashboardSettingsCell(title: "VOC Index", isOn: $viewModel.vocIndexIsSelected)
                 DashboardSettingsCell(title: "TVOC Index", isOn: $viewModel.tvocIsSelected)
                 DashboardSettingsCell(title: "PM2.5", isOn: $viewModel.pm25IsSelected)
                 DashboardSettingsCell(title: "PM10", isOn: $viewModel.pm10IsSelected)
-                DashboardSettingsCell(title: "Temperature", isOn: $viewModel.temperatureIsSelected)
+                DashboardSettingsCell(title: "Temperature Celsius", isOn: $viewModel.tempCelsiusIsSelected)
+                DashboardSettingsCell(title: "Temperature Fahrenheit", isOn: $viewModel.tempFahrenheitIsSelected)
                 DashboardSettingsCell(title: "Humidity", isOn: $viewModel.humidityIsSelected)
             }
     }

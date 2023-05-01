@@ -27,7 +27,7 @@ public class DashboardInteractor {
     private var cancellables = Set<AnyCancellable>()
     private let defaultValue: Double = 0
     
-    public func assignAirQualityData(data: [FetchData.ReturnType]) {
+    private func assignAirQualityData(data: [FetchData.ReturnType]) {
         DispatchQueue.main.async { [self] in
             data.forEach { data in
                 dashboardViewModel.dataItems = [
@@ -36,7 +36,8 @@ public class DashboardInteractor {
                     makeDataItem(with: data.pm10, valueType: .pm10, isSelected: settingsViewModel.pm10IsSelected, info: PM10ValueInformation()),
                     makeDataItem(with: data.vocIndex, valueType: .voc, isSelected: settingsViewModel.vocIndexIsSelected, info: VocValueInformation()),
                     makeDataItem(with: data.tvoc, valueType: .tvoc, isSelected: settingsViewModel.tvocIsSelected, info: TvocValueInformation()),
-                    makeDataItem(with: settingsViewModel.isFahrenheit ? data.tempCelsius?.toFahrenheit() : data.tempCelsius, valueType: settingsViewModel.isFahrenheit ? .tempFahrenheit : .tempCelsius, isSelected: settingsViewModel.temperatureIsSelected, info: settingsViewModel.isFahrenheit ? TempFahrenheitValueInformation() : TempCelsiusValueInformation()),
+                    makeDataItem(with: data.tempCelsius, valueType: .tempCelsius, isSelected: settingsViewModel.tempCelsiusIsSelected, info: TempCelsiusValueInformation()),
+                    makeDataItem(with: data.tempFahrenheit, valueType: .tempFahrenheit, isSelected: settingsViewModel.tempCelsiusIsSelected, info: TempFahrenheitValueInformation()),
                     makeDataItem(with: data.humidity, valueType: .humidity, isSelected: settingsViewModel.humidityIsSelected, info: HumidityValueInformation())
                 ]
                 dashboardViewModel.aqiScore = AirQualityScoreItem(value: data.aqScore ?? 0, color: updateAQIValueColor(value: data.aqScore ?? 0), isSelected: settingsViewModel.aqiScoreIsSelected)
@@ -44,10 +45,10 @@ public class DashboardInteractor {
         }
     }
     
-    func makeDataItem(with value: Double?, valueType: ValueType, isSelected: Bool, info: ValueInformation) -> DataItem {
+    private func makeDataItem(with value: Double?, valueType: ValueType, isSelected: Bool, info: ValueInformation) -> DataItem {
         return DataItem(value: value ?? defaultValue, color: updateCardColor(value: value ?? defaultValue, valueType: valueType), info: info, isSelected: isSelected)
     }
-
+    
     public func updateAirQualityData() async {
         await self.loadAirQualityData()
     }
@@ -56,7 +57,7 @@ public class DashboardInteractor {
         await self.fetchAirQualityData()
     }
     
-    public func fetchAirQualityData() async {
+    private func fetchAirQualityData() async {
         let apiClient = APIClient(baseURL: settingsViewModel.baseUrl)
         let fetchData = FetchData(path: settingsViewModel.urlPath, method: .get, customHeaders: self.setCustomHeaders())
         apiClient.dispatch(fetchData)
@@ -161,12 +162,5 @@ extension DashboardInteractor {
         case tempCelsius
         case tempFahrenheit
         case humidity
-    }
-}
-
-extension Double {
-    func toFahrenheit() -> Double {
-        let fahrenheit = (self * 1.8) + 32
-        return Double(String(format: "%.1f", fahrenheit)) ?? 0.0
     }
 }

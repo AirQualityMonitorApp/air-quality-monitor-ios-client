@@ -11,15 +11,6 @@ public final class DashboardViewModel: ObservableObject {
     @Published var aqiScore: AirQualityScoreItem = AirQualityScoreItem(value: 0, color: .white, isSelected: true)
 }
 
-enum ValueType {
-    case co2
-    case temperature
-    case humidity
-    case voc
-    case pm25
-    case aqi
-}
-
 struct DataItem: Equatable, Identifiable {
     static func == (lhs: DataItem, rhs: DataItem) -> Bool {
         return lhs.id == rhs.id

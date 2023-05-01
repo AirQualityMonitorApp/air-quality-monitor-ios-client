@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A282E08F298435EB00AEEC69"
-               BuildableName = "AirQualityMonitor.app"
+               BuildableName = "Air Quality Monitor.app"
                BlueprintName = "AirQualityMonitor"
                ReferencedContainer = "container:AirQualityMonitor.xcodeproj">
             </BuildableReference>
@@ -74,7 +74,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A282E08F298435EB00AEEC69"
-            BuildableName = "AirQualityMonitor.app"
+            BuildableName = "Air Quality Monitor.app"
             BlueprintName = "AirQualityMonitor"
             ReferencedContainer = "container:AirQualityMonitor.xcodeproj">
          </BuildableReference>
@@ -91,7 +91,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A282E08F298435EB00AEEC69"
-            BuildableName = "AirQualityMonitor.app"
+            BuildableName = "Air Quality Monitor.app"
             BlueprintName = "AirQualityMonitor"
             ReferencedContainer = "container:AirQualityMonitor.xcodeproj">
          </BuildableReference>

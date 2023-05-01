@@ -54,3 +54,9 @@ public struct HumidityValueInformation: ValueInformation {
     public let limit: Double = 100.0
 }
 
+public struct Pressure: ValueInformation {
+    public let title: String = "Pressure"
+    public let unitMeasure: String = "ps"
+    public let limit: Double = 100.0
+}
+

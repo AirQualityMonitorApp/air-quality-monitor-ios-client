@@ -40,7 +40,7 @@
 		A255D99429C7463B00AE0A88 /* AQMUITestsDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMUITestsDashboard.swift; sourceTree = "<group>"; };
 		A255D99629C7476900AE0A88 /* AirQualityMonitor.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = AirQualityMonitor.xctestplan; sourceTree = "<group>"; };
 		A264EACD298FCFEF00CF2CAE /* Dashboard */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Dashboard; sourceTree = "<group>"; };
-		A282E090298435EB00AEEC69 /* AirQualityMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQualityMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A282E090298435EB00AEEC69 /* Air Quality Monitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Air Quality Monitor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A282E099298435EC00AEEC69 /* AirQualityMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AirQualityMonitor.entitlements; sourceTree = "<group>"; };
 		A282E0AA2984382300AEEC69 /* AirQualityMonitorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityMonitorApp.swift; sourceTree = "<group>"; };
 		A282E0B929843D8900AEEC69 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 		A282E091298435EB00AEEC69 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A282E090298435EB00AEEC69 /* AirQualityMonitor.app */,
+				A282E090298435EB00AEEC69 /* Air Quality Monitor.app */,
 				A255D98929C745F600AE0A88 /* AirQualityMonitorUITests.xctest */,
 			);
 			name = Products;
@@ -226,7 +226,7 @@
 				A287000729F4577C009D77F1 /* Dashboard */,
 			);
 			productName = "Air-quality-monitor";
-			productReference = A282E090298435EB00AEEC69 /* AirQualityMonitor.app */;
+			productReference = A282E090298435EB00AEEC69 /* Air Quality Monitor.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -482,6 +482,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AirQualityMonitor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Air Quality Monitor";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -502,7 +503,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Pietro-Ballarin.Air-quality-monitor";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Air Quality Monitor";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -528,6 +529,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AirQualityMonitor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Air Quality Monitor";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -548,7 +550,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Pietro-Ballarin.Air-quality-monitor";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Air Quality Monitor";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

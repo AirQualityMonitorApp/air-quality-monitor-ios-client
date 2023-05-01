@@ -12,7 +12,6 @@ public class SettingsViewModel: ObservableObject {
     @AppStorage("headerField2") public var headerField2: String = ""
     @AppStorage("headerFieldValue2") public var headerFieldValue2: String = ""
     
-    @AppStorage("isFahrenheit") public var isFahrenheit: Bool = false
     @AppStorage("requestInterval") public var requestInterval: String = ""
     @AppStorage("co2IsSelected") public var co2IsSelected: Bool = false
     @AppStorage("tvocIsSelected") public var tvocIsSelected: Bool = false
@@ -20,6 +19,7 @@ public class SettingsViewModel: ObservableObject {
     @AppStorage("pm25IsSelected") public var pm25IsSelected: Bool = false
     @AppStorage("pm10IsSelected") public var pm10IsSelected: Bool = false
     @AppStorage("humidityIsSelected") public var humidityIsSelected: Bool = false
-    @AppStorage("temperatureIsSelected") public var temperatureIsSelected: Bool = false
+    @AppStorage("tempCelsiusIsSelected") public var tempCelsiusIsSelected: Bool = false
+    @AppStorage("tempFahrenheitIsSelected") public var tempFahrenheitIsSelected: Bool = false
     @AppStorage("aqiScoreIsSelected") public var aqiScoreIsSelected: Bool = false
 }
