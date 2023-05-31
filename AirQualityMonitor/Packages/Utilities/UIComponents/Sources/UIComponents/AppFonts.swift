@@ -14,7 +14,7 @@ public enum AppFonts: String, CaseIterable {
 public extension Font.TextStyle {
     var size: CGFloat {
         switch self {
-        case .largeTitle: return 48
+        case .largeTitle: return 64
         case .title: return 24
         case .headline: return 18
         case .body: return 16

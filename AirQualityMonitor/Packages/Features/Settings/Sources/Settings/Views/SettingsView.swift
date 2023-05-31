@@ -5,17 +5,19 @@ public struct SettingsView: View {
     
     @ObservedObject var viewModel: SettingsViewModel
     let size: CGSize
+    var updateValues: () -> Void
     
-    public init(viewModel: SettingsViewModel, size: CGSize) {
+    public init(viewModel: SettingsViewModel, size: CGSize, updateValues: @escaping () -> Void) {
         self.viewModel = viewModel
         self.size = size
+        self.updateValues = updateValues
     }
     
     public var body: some View {
         NavigationView {
             VStack{
                 List {
-                    DashboardSettingsView(viewModel: viewModel)
+                    DashboardSettingsView(viewModel: viewModel, updateValues: self.updateValues)
                     ServerConfiguration(viewModel: viewModel, size: size)
                     AppInfoView()
                 }
@@ -36,6 +38,10 @@ public struct SettingsListStyle: ViewModifier {
             .listStyle(GroupedListStyle())
         }
   }
+}
+
+public struct SettingsTogglesConfiguration {
+    var updateValues: () -> Void
 }
 
 

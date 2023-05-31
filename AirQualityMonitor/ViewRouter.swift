@@ -4,63 +4,68 @@ import SwiftUI
 import UIKit
 
 struct ViewRouter: View {
-    
+    let dashboardPresenter: DashboardPresenting
     @Environment(\.scenePhase) var scenePhase
-    @ObservedObject var settingsViewModel: SettingsViewModel
     @ObservedObject var dashboardViewModel: DashboardViewModel
-    let dashboardInteractor: DashboardInteractor
-    let size: CGSize
+    var settingsViewModel: SettingsViewModel
     
-    init(settingsViewModel: SettingsViewModel, dashboardViewModel: DashboardViewModel, dashboardInteractor: DashboardInteractor, size: CGSize) {
-        self.settingsViewModel = settingsViewModel
+    init(dashboardPresenter: DashboardPresenter, dashboardViewModel: DashboardViewModel, settingsViewModel: SettingsViewModel) {
+        self.dashboardPresenter = dashboardPresenter
         self.dashboardViewModel = dashboardViewModel
-        self.dashboardInteractor = dashboardInteractor
-        self.size = size
+        self.settingsViewModel = settingsViewModel
         let appearance = UITabBar.appearance()
         appearance.backgroundColor = UIColor(Color.backgroundPrimary)
         appearance.unselectedItemTintColor = UIColor(.green)
     }
-
+    
     var body: some View {
-        VStack{
-            HeaderView(headerHeight: size.height * 0.08)
-            TabView {
-                DashboardView(interactor: dashboardInteractor,
-                    width: size.width,
-                    dashboardViewHeight: size.height * 0.8
-                )
-                .tabItem() {
-                    Image(systemName: "house.fill")
-                    Text("Dashboard")
+        GeometryReader { geometry in
+            VStack{
+                TabView {
+                    DashboardView(
+                        valuesViewData: ValuesViewData(
+                            viewDataItems: dashboardViewModel.dataItems,
+                            width: geometry.size.width,
+                            updateAirQualityData: dashboardPresenter.updateAirQualityData,
+                            aqiValuesModel: AQIValuesModel(
+                                value: dashboardViewModel.aqiScore.value,
+                                color: dashboardViewModel.aqiScore.color,
+                                isSelected: dashboardViewModel.aqiScore.isSelected,
+                                updateAQIValueColor: dashboardPresenter.updateAQIValueColor)),
+                        dashboardViewHeight: geometry.size.height * 0.85
+                    )
+                    .tabItem() {
+                        Image(systemName: "house.fill")
+                        Text("Dashboard")
+                    }
+                    SettingsView(
+                        viewModel: settingsViewModel,
+                        size: geometry.size,
+                        updateValues: dashboardPresenter.updateAirQualityData
+                    )
+                    .tabItem() {
+                        Image(systemName: "gearshape.2.fill")
+                        Text("Settings")
+                    }
                 }
-                SettingsView(
-                    viewModel: settingsViewModel,
-                    size: size
-                )
-                .tabItem() {
-                    Image(systemName: "gearshape.2.fill")
-                    Text("Settings")
+                .accentColor(.green)
+            }
+            .onAppear {
+                dashboardPresenter.updateAirQualityData()
+            }
+            .onChange(of: scenePhase) { newScenePhase in
+                if newScenePhase == .active {
+                    dashboardPresenter.updateAirQualityData()
                 }
             }
-            .accentColor(.green)
+            .onReceive(dashboardPresenter.getInterval(), perform: { _ in
+                dashboardPresenter.updateAirQualityData()
+            })
+            .background(Color.green.ignoresSafeArea())
         }
-        .onAppear {
-            Task {
-                await dashboardInteractor.updateAirQualityData()
-            }
-        }
-        .onChange(of: scenePhase) { newScenePhase in
-            if newScenePhase == .active {
-                Task {
-                    await dashboardInteractor.updateAirQualityData()
-                }
-            }
-        }
-        .onReceive(dashboardInteractor.timer, perform: { _ in
-            Task {
-                await dashboardInteractor.updateAirQualityData()
-            }
-        })
-        .background(Color.green.ignoresSafeArea())
+        .background(
+            Color.white
+        )
+        .edgesIgnoringSafeArea(.all)
     }
 }
