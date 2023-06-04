@@ -1,27 +1,19 @@
 import SwiftUI
 
 struct ValuesView: View {
-    
-    var flexibleLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
+    let viewData: ValuesViewData
     var valueViewHeight: CGFloat
-    var width: CGFloat
-    @ObservedObject var viewModel: DashboardViewModel
-    
-    @State private var showPopover = false
-    
+        
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: flexibleLayout, spacing: 5) {
-                ForEach(viewModel.dataItems, id: \.id) { card in
+        LazyVGrid(columns: viewData.flexibleLayout, spacing: 5) {
+                ForEach(viewData.viewDataItems, id: \.id) { card in
                     if card.isSelected {
-                        CircularCardView(displayedData: card.value, parentViewHeight: valueViewHeight, width: width * 0.3, color: card.color, valueInformation: card.info)
+                        CircularCardView(configuration: .init(displayedData: card.value, height: valueViewHeight, width: viewData.width * 0.3, color: card.color, valueInformation: card.info))
                     }
-                    
-                }
+                }.padding(.bottom, 24)
             }
-            .padding(EdgeInsets(top: 10, leading: 6, bottom: 0, trailing: 6))
+            .padding(EdgeInsets(top: 8, leading: 6, bottom: 0, trailing: 6))
             Spacer()
-        }
     }
 }
 

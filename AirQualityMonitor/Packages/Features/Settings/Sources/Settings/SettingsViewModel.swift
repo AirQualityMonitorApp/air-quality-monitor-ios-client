@@ -1,7 +1,13 @@
 import Foundation
 import SwiftUI
 
-public class SettingsViewModel: ObservableObject {
+public class SettingsViewModel: ObservableObject, Equatable {
+    public static func == (lhs: SettingsViewModel, rhs: SettingsViewModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    public let id = UUID()
+    
     
     public init() {}
     

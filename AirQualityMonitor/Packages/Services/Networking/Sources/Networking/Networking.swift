@@ -25,9 +25,7 @@ extension Request {
 }
 
 extension Request {
-    
     private func requestBodyFrom(params: [String: Any]) -> Data? {
-        
         guard let httpBody = try? JSONSerialization.data(withJSONObject: params, options: .prettyPrinted) else {
             return nil
         }
@@ -70,21 +68,17 @@ public enum NetworkRequestError: LocalizedError, Equatable {
 }
 
 public struct NetworkDispatcher {
-    
     let urlSession: URLSession!
     public init(urlSession: URLSession = .shared) {
         self.urlSession = urlSession
     }
     
     func dispatch<ReturnType: Codable>(request: URLRequest) -> AnyPublisher<[ReturnType], NetworkRequestError> {
-        
         return urlSession
             .dataTaskPublisher(for: request)
             .tryMap({ data, response in
-                
                 if let response = response as? HTTPURLResponse,
                    !(200...299).contains(response.statusCode) {
-                    
                     throw httpError(response.statusCode)
                 }
                 return data
@@ -99,7 +93,6 @@ public struct NetworkDispatcher {
 }
 
 extension NetworkDispatcher {
-    
     private func httpError(_ statusCode: Int) -> NetworkRequestError {
         switch statusCode {
         case 400: return .badRequest
@@ -128,7 +121,6 @@ extension NetworkDispatcher {
 }
 
 public struct APIClient {
-    
     public var baseURL: String
     public var networkDispatcher: NetworkDispatcher
     public init(baseURL: String,
@@ -154,7 +146,6 @@ public struct FetchData: Request {
     public var path: String
     public var method: HTTPMethod
     public var customHeaders: CustomHeaders?
-    
     
     public init(body: [String : Any]? = nil, path: String, method: HTTPMethod, customHeaders: CustomHeaders? = nil) {
         self.body = body

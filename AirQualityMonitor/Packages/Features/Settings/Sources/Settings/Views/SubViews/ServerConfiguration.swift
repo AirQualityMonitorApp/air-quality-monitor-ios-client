@@ -16,7 +16,6 @@ struct ServerConfiguration: View {
                         .font(.footnoteH6)
                         .foregroundColor(.fontPrimary)
                 }
-                
             }
     }
 }

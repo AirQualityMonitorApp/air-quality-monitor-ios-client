@@ -2,7 +2,6 @@ import Foundation
 import Network
 
 public final class NetworkManager: ObservableObject {
-    
     public enum NetworkState {
         case connected
         case notConnected

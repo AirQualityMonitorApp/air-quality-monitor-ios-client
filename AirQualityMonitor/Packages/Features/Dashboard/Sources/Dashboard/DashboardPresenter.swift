@@ -4,9 +4,17 @@ import Foundation
 import Models
 import Networking
 import Settings
+import UIKit
 
-@MainActor
-public class DashboardInteractor {
+public protocol DashboardPresenting {
+    func updateAirQualityData()
+    func updateCardColor(value: Double, valueType: ValueType) -> Color
+    func updateAQIValueColor(value: Int) -> Color
+    func getInterval() -> Publishers.Autoconnect<Timer.TimerPublisher>
+}
+
+public final class DashboardPresenter: DashboardPresenting {
+    public weak var hostingUI: UIViewController?
     
     public let dashboardViewModel: DashboardViewModel
     public let settingsViewModel: SettingsViewModel
@@ -20,7 +28,7 @@ public class DashboardInteractor {
         return CustomHeaders(customHeader1: settingsViewModel.headerField1, customHeader2: settingsViewModel.headerField2, headerValue1: settingsViewModel.headerFieldValue1, headerValue2: settingsViewModel.headerFieldValue2)
     }
     
-    public var timer: Publishers.Autoconnect<Timer.TimerPublisher> {
+    public func getInterval() -> Publishers.Autoconnect<Timer.TimerPublisher> {
         Timer.publish(every: 10, on: .main, in: .common).autoconnect()
     }
     
@@ -37,7 +45,7 @@ public class DashboardInteractor {
                     makeDataItem(with: data.vocIndex, valueType: .voc, isSelected: settingsViewModel.vocIndexIsSelected, info: VocValueInformation()),
                     makeDataItem(with: data.tvoc, valueType: .tvoc, isSelected: settingsViewModel.tvocIsSelected, info: TvocValueInformation()),
                     makeDataItem(with: data.tempCelsius, valueType: .tempCelsius, isSelected: settingsViewModel.tempCelsiusIsSelected, info: TempCelsiusValueInformation()),
-                    makeDataItem(with: data.tempFahrenheit, valueType: .tempFahrenheit, isSelected: settingsViewModel.tempCelsiusIsSelected, info: TempFahrenheitValueInformation()),
+                    makeDataItem(with: data.tempFahrenheit, valueType: .tempFahrenheit, isSelected: settingsViewModel.tempFahrenheitIsSelected, info: TempFahrenheitValueInformation()),
                     makeDataItem(with: data.humidity, valueType: .humidity, isSelected: settingsViewModel.humidityIsSelected, info: HumidityValueInformation())
                 ]
                 dashboardViewModel.aqiScore = AirQualityScoreItem(value: data.aqScore ?? 0, color: updateAQIValueColor(value: data.aqScore ?? 0), isSelected: settingsViewModel.aqiScoreIsSelected)
@@ -49,20 +57,20 @@ public class DashboardInteractor {
         return DataItem(value: value ?? defaultValue, color: updateCardColor(value: value ?? defaultValue, valueType: valueType), info: info, isSelected: isSelected)
     }
     
-    public func updateAirQualityData() async {
-        await self.loadAirQualityData()
+    public func updateAirQualityData() {
+         self.loadAirQualityData()
     }
 
-    private func loadAirQualityData() async {
-        await self.fetchAirQualityData()
+    private func loadAirQualityData() {
+         self.fetchAirQualityData()
     }
     
-    private func fetchAirQualityData() async {
+    private func fetchAirQualityData() {
         let apiClient = APIClient(baseURL: settingsViewModel.baseUrl)
         let fetchData = FetchData(path: settingsViewModel.urlPath, method: .get, customHeaders: self.setCustomHeaders())
         apiClient.dispatch(fetchData)
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in
+            .sink(receiveCompletion: { completion in
             }, receiveValue: { data in
                 self.assignAirQualityData(data: data)
             })
@@ -70,7 +78,7 @@ public class DashboardInteractor {
     }
 }
 
-extension DashboardInteractor {
+extension DashboardPresenter {
     private func setTempHumidityCardColor(value: Double, level: TempHumidityLevels) -> Color {
         switch value {
         case level.good:
@@ -152,15 +160,15 @@ extension DashboardInteractor {
             return .gray
         }
     }
-    
-    public enum ValueType {
-        case co2
-        case voc
-        case tvoc
-        case pm25
-        case pm10
-        case tempCelsius
-        case tempFahrenheit
-        case humidity
-    }
+}
+
+public enum ValueType {
+    case co2
+    case voc
+    case tvoc
+    case pm25
+    case pm10
+    case tempCelsius
+    case tempFahrenheit
+    case humidity
 }

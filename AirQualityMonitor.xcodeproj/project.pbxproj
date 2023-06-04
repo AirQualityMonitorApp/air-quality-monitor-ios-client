@@ -8,17 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		A2380BDC2997EEAC00994453 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2380BDB2997EEAC00994453 /* ViewRouter.swift */; };
+		A249790D2A1630FB0043CD85 /* Dashboard in Frameworks */ = {isa = PBXBuildFile; productRef = A249790C2A1630FB0043CD85 /* Dashboard */; };
 		A2529F9629EAB28400E7DC8F /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = A2529F9529EAB28400E7DC8F /* Models */; };
 		A2529F9829EAB28400E7DC8F /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = A2529F9729EAB28400E7DC8F /* Networking */; };
 		A2529F9C29EAB28400E7DC8F /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = A2529F9B29EAB28400E7DC8F /* UIComponents */; };
 		A2529F9E29EAB28400E7DC8F /* Utilities+Extensions in Frameworks */ = {isa = PBXBuildFile; productRef = A2529F9D29EAB28400E7DC8F /* Utilities+Extensions */; };
 		A255D99529C7463B00AE0A88 /* AQMUITestsDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A255D99429C7463B00AE0A88 /* AQMUITestsDashboard.swift */; };
-		A282E0AB2984382300AEEC69 /* AirQualityMonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A282E0AA2984382300AEEC69 /* AirQualityMonitorApp.swift */; };
+		A282E0AB2984382300AEEC69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A282E0AA2984382300AEEC69 /* AppDelegate.swift */; };
 		A287000629F45769009D77F1 /* Settings in Frameworks */ = {isa = PBXBuildFile; productRef = A287000529F45769009D77F1 /* Settings */; };
-		A287000829F4577C009D77F1 /* Dashboard in Frameworks */ = {isa = PBXBuildFile; productRef = A287000729F4577C009D77F1 /* Dashboard */; };
 		A291B450298441F400322E32 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B44F298441F400322E32 /* HeaderView.swift */; };
-		A291B4BF298519D400322E32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4BE298519D400322E32 /* ContentView.swift */; };
+		A291B4BF298519D400322E32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291B4BE298519D400322E32 /* SceneDelegate.swift */; };
 		A2AF6ACA29EA959A00BE0DEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2AF6AC929EA959A00BE0DEB /* Assets.xcassets */; };
+		A2D289DB2A161D4D0039C95B /* ViewRouterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D289DA2A161D4D0039C95B /* ViewRouterController.swift */; };
 		A2F62E1B2997F57F00CA2E53 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F62E1A2997F57E00CA2E53 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,15 +43,16 @@
 		A264EACD298FCFEF00CF2CAE /* Dashboard */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Dashboard; sourceTree = "<group>"; };
 		A282E090298435EB00AEEC69 /* Air Quality Monitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Air Quality Monitor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A282E099298435EC00AEEC69 /* AirQualityMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AirQualityMonitor.entitlements; sourceTree = "<group>"; };
-		A282E0AA2984382300AEEC69 /* AirQualityMonitorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityMonitorApp.swift; sourceTree = "<group>"; };
+		A282E0AA2984382300AEEC69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A282E0B929843D8900AEEC69 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
 		A282E0BD29843E2300AEEC69 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Models; sourceTree = "<group>"; };
 		A282E0BE29843E5A00AEEC69 /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UIComponents; sourceTree = "<group>"; };
 		A291B44F298441F400322E32 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		A291B4BE298519D400322E32 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A291B4BE298519D400322E32 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A29DAB74298FD2A50019E2E8 /* Settings */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Settings; sourceTree = "<group>"; };
 		A2AF6AC929EA959A00BE0DEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2CF15A529BE061E001123B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A2D289DA2A161D4D0039C95B /* ViewRouterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouterController.swift; sourceTree = "<group>"; };
 		A2F62E1A2997F57E00CA2E53 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +73,7 @@
 				A2529F9E29EAB28400E7DC8F /* Utilities+Extensions in Frameworks */,
 				A287000629F45769009D77F1 /* Settings in Frameworks */,
 				A2529F9C29EAB28400E7DC8F /* UIComponents in Frameworks */,
-				A287000829F4577C009D77F1 /* Dashboard in Frameworks */,
+				A249790D2A1630FB0043CD85 /* Dashboard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,9 +168,10 @@
 				A2CF15A529BE061E001123B8 /* Info.plist */,
 				A22494E2298FC45800EF5F64 /* Packages */,
 				A2380BDB2997EEAC00994453 /* ViewRouter.swift */,
+				A2D289DA2A161D4D0039C95B /* ViewRouterController.swift */,
 				A2F62E1A2997F57E00CA2E53 /* LoadingView.swift */,
-				A282E0AA2984382300AEEC69 /* AirQualityMonitorApp.swift */,
-				A291B4BE298519D400322E32 /* ContentView.swift */,
+				A282E0AA2984382300AEEC69 /* AppDelegate.swift */,
+				A291B4BE298519D400322E32 /* SceneDelegate.swift */,
 				A291B44F298441F400322E32 /* HeaderView.swift */,
 				A282E099298435EC00AEEC69 /* AirQualityMonitor.entitlements */,
 				A2AF6AC929EA959A00BE0DEB /* Assets.xcassets */,
@@ -223,7 +226,7 @@
 				A2529F9B29EAB28400E7DC8F /* UIComponents */,
 				A2529F9D29EAB28400E7DC8F /* Utilities+Extensions */,
 				A287000529F45769009D77F1 /* Settings */,
-				A287000729F4577C009D77F1 /* Dashboard */,
+				A249790C2A1630FB0043CD85 /* Dashboard */,
 			);
 			productName = "Air-quality-monitor";
 			productReference = A282E090298435EB00AEEC69 /* Air Quality Monitor.app */;
@@ -300,9 +303,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2D289DB2A161D4D0039C95B /* ViewRouterController.swift in Sources */,
 				A291B450298441F400322E32 /* HeaderView.swift in Sources */,
-				A282E0AB2984382300AEEC69 /* AirQualityMonitorApp.swift in Sources */,
-				A291B4BF298519D400322E32 /* ContentView.swift in Sources */,
+				A282E0AB2984382300AEEC69 /* AppDelegate.swift in Sources */,
+				A291B4BF298519D400322E32 /* SceneDelegate.swift in Sources */,
 				A2F62E1B2997F57F00CA2E53 /* LoadingView.swift in Sources */,
 				A2380BDC2997EEAC00994453 /* ViewRouter.swift in Sources */,
 			);
@@ -483,9 +487,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AirQualityMonitor/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Air Quality Monitor";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
@@ -530,9 +531,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AirQualityMonitor/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Air Quality Monitor";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
@@ -594,6 +592,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A249790C2A1630FB0043CD85 /* Dashboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Dashboard;
+		};
 		A2529F9529EAB28400E7DC8F /* Models */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Models;
@@ -613,10 +615,6 @@
 		A287000529F45769009D77F1 /* Settings */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Settings;
-		};
-		A287000729F4577C009D77F1 /* Dashboard */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Dashboard;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

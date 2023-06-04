@@ -12,7 +12,6 @@ struct Customization: View {
     @ObservedObject var viewModel: SettingsViewModel
     
     var body: some View {
-        
             List {
                 Section(header: Text("Your Server URL")) {
                     TextField("URL", text: viewModel.$baseUrl)
